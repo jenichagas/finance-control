@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import date
+from typing import Optional
 
 
 class Debt(BaseModel):
@@ -7,4 +8,4 @@ class Debt(BaseModel):
     value: float
     category: str
     start_date: date
-    installments: int = 1
+    installments: Optional [int] = 1
