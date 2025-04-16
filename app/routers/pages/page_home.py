@@ -11,3 +11,5 @@ async def home(request: Request):
         "request": request,
         "partial": "partials/home/home/home.html"
     })
+
+

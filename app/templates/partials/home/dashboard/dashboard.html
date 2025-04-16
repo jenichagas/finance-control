@@ -1,0 +1,34 @@
+<div class="dashboard">
+    <h2>Bem-vindo(a), {{ user_name }} 👋</h2>
+  
+    <section class="resumo">
+      <div class="card">
+        <h3>Saldo disponível</h3>
+        <p>R$ {{ saldo }}</p>
+      </div>
+      <div class="card">
+        <h3>Gasto no mês</h3>
+        <p>R$ {{ gasto_total }}</p>
+      </div>
+    </section>
+  
+    <section class="grafico-categorias">
+      <h3>Distribuição por categoria</h3>
+      <div id="grafico-categorias"></div>
+    </section>
+  
+    <section class="ultimos-lancamentos">
+      <h3>Últimos lançamentos</h3>
+      <ul>
+        {% for d in dividas %}
+        <li>{{ d.name }} - R$ {{ d.value }} em {{ d.category }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  
+    <div class="atalhos">
+      <a href="/nova-divida" class="btn">+ Nova dívida</a>
+      <a href="/orcamento" class="btn">Ver orçamento</a>
+    </div>
+  </div>
+  

@@ -45,6 +45,7 @@ async def create_debt(debt: Debt):
 @router.get("/debt/by-month")
 async def get_debts_by_month(month: str = Query(..., example="2025-04")):
     dbts = await db.debts.find({"reference_month": month}).to_list(1000)
+    return [{**d, "_id": str(d["_id"])} for d in dbts]
 
 
 @router.get("/debt/total-by-month")
@@ -87,18 +88,6 @@ async def update_debt(id: str, debt_data: DebtUpdate):
     updated_data = debt_data.model_dump(exclude_unset=True)
     result = await db.debts.update_one({"_id": ObjectId(id)}, {"$set": updated_data})
     return {"status": "updated", "id": id, "updated_fields": updated_data}
-
-
-@router.get("debt/by-category")
-async def get_debts_grouped_by_category(month: str = Query(..., example="2025-04")):
-    cursor = db.debts.aggregate(
-        [
-            {"$match": {"reference_month": month}},
-            {"$group": {"_id": "$category", "total": {"$sum": "$value"}}},
-        ]
-    )
-    result = await cursor.to_list(length=100)
-    return [{"category": doc["_id"], "total": doc["total"]} for doc in result]
 
 
 @router.get("/debt/categories")
