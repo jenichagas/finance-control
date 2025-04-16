@@ -6,7 +6,8 @@
         "@parcel/transformer-sass": "^2.14.4",
         "cpx": "^1.5.0",
         "parcel": "^2.14.4",
-        "rimraf": "^6.0.1"
+        "rimraf": "^6.0.1",
+        "sass": "^1.86.3"
     },
     "scripts": {
         "delete-dist": "rimraf app/templates/dist",
