@@ -13,5 +13,7 @@ async def get_current_user(request: Request):
         return None
 
     user_id = payload.get("sub")
-    user = await db.users.find_one({"_id": ObjectId(user_id)})
-    return user
+    if not user_id:
+        return None
+
+    return await db.users.find_one({"_id": ObjectId(user_id)})

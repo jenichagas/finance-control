@@ -20,4 +20,14 @@
 
     <button type="submit" class="btn">Criar</button>
 </form>
-{% endblock %}
+{% if error == "email" %}
+<div
+    x-data="{ show: true }"
+    x-show="show"
+    x-transition
+    x-init="setTimeout(() => show = false, 4000)"
+    class="alert alert-error"
+>
+    Este e-mail já está em uso. Tente outro.
+</div>
+{% endif %} {% endblock %}

@@ -15,7 +15,7 @@ async def register(
 ):
     existing_user = await db.users.find_one({"email": email})
     if existing_user:
-        raise HTTPException(status_code=400, detail="E-mail já registrado.")
+        return RedirectResponse("/register?error=email", status_code=302)
 
     hashed_pw = hash_password(password)
 
@@ -29,4 +29,4 @@ async def register(
     )
 
     result = await db.users.insert_one(user.model_dump())
-    return RedirectResponse("/login", status_code=302)
+    return RedirectResponse("/login?success=1", status_code=302)
