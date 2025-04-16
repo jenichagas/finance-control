@@ -1,0 +1,23 @@
+{% extends "bases/auth-control/auth-control.html" %} {% block content %}
+<div
+    x-data="{ open: {{ 'true' if success else 'false' }} }"
+    x-show="open"
+    x-transition
+    class="alert alert-success"
+>
+    Cadastro realizado com sucesso!
+</div>
+<form method="post" action="/register" class="form-box">
+    <h1>Crie uma conta</h1>
+    <label for="name">Nome</label>
+    <input type="text" />
+
+    <label for="email">E-mail</label>
+    <input type="email" name="email" required />
+
+    <label for="password">Crie uma senha</label>
+    <input type="password" name="password" required />
+
+    <button type="submit" class="btn">Criar</button>
+</form>
+{% endblock %}

@@ -5,10 +5,10 @@ router = APIRouter()
 templates = Jinja2Templates(directory="app/templates")
 
 
-@router.get("/login")
-async def login_page(request: Request, success: bool = False):
+@router.get("/reset")
+async def login_page(request: Request):
     return templates.TemplateResponse(
         "bases/auth-control/auth-control.html",
-        {"request": request, "partial": "partials/login-form/login-form.html", "success": success},
+        {"request": request, "partial": "partials/reset-form/reset-form.html"},
     )
 

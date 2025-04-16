@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Request, Form, HTTPException
+from fastapi.responses import RedirectResponse
 from app.models.user import UserCreate, UserInDB
 from app.config.mongodb import db
 from app.utils.security import hash_password
@@ -28,4 +29,4 @@ async def register(
     )
 
     result = await db.users.insert_one(user.model_dump())
-    return {"msg": "Usuário registrado com sucesso", "id": str(result.inserted_id)}
+    return RedirectResponse("/login", status_code=302)

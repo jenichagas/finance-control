@@ -1,7 +1,8 @@
-{% extends "bases/auth-control/auth-control.html" %}
+{% extends "bases/auth-control/auth-control.html" %} 
 
 {% block content %}
-  <form method="post" action="/login" class="form-box">
+
+<form method="post" action="/login" class="form-box">
     <h1>Login</h1>
 
     <label for="email">E-mail</label>
@@ -13,8 +14,9 @@
     <button type="submit" class="btn">Entrar</button>
 
     <p class="login-footer">
-      Ainda não tem conta?
-      <a href="/register">Crie uma</a>
+        Ainda não tem conta?
+        <a href="/register">Crie uma</a>
+        <a href="/reset">Esqueci senha</a>
     </p>
-  </form>
+</form>
 {% endblock %}
