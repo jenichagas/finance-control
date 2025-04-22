@@ -11,7 +11,7 @@ from app.routers.auth import auth_login, auth_register, auth_reset
 app = FastAPI()
 
 # arquivos estáticos
-app.mount("/static", StaticFiles(directory="app/templates/dist"), name="static")
+app.mount("/statics", StaticFiles(directory="app/templates/statics"), name="statics")
 
 # páginas (HTML)
 app.include_router(page_home.router)

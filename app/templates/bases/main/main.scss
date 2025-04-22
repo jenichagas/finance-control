@@ -1,2 +1,6 @@
+@use "../../utils/root-vars";
+@use "../../utils/variables.scss" as *;
+
 @use "../../partials/home/home/home.scss";
 @use "../../partials/login-form/login-form.scss";
+@use "../../utils/reset.scss";

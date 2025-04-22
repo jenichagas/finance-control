@@ -1,6 +1,7 @@
 {
     "dependencies": {
-        "alpinejs": "^3.14.9"
+        "alpinejs": "^3.14.9",
+        "htmx.org": "^1.9.12"
     },
     "devDependencies": {
         "@parcel/transformer-sass": "^2.14.4",
@@ -10,10 +11,10 @@
         "sass": "^1.86.3"
     },
     "scripts": {
-        "delete-dist": "rimraf app/templates/dist",
-        "assets-to-dist": "cpx 'app/templates/assets-to-dist/**/*' 'app/templates/dist/' ",
-        "watch": "parcel watch app/templates/bases/main/main.js --dist-dir app/templates/dist",
+        "delete-dist": "rimraf app/templates/statics/dist",
+        "assets-to-dist": "cpx 'app/templates/assets-to-dist/**/*' 'app/templates/statics/dist/' ",
+        "watch": "parcel watch app/templates/bases/main/main.js --dist-dir app/templates/statics/dist",
         "dev": "npm run delete-dist && npm run assets-to-dist && npm run watch",
-        "build": "npm run delete-dist && npm run assets-to-dist && parcel build app/templates/bases/main/main.js --dist-dir app/templates/dist"
+        "build": "npm run delete-dist && npm run assets-to-dist && parcel build app/templates/bases/main/main.js --dist-dir app/templates/statics/dist"
     }
 }

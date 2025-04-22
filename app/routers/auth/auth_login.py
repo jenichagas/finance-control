@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Form, Request, Response, HTTPException
 from fastapi.responses import RedirectResponse
 from app.utils.security import verify_password, create_access_token
+from fastapi.responses import JSONResponse
 from app.config.mongodb import db
 
 router = APIRouter()
@@ -17,7 +18,7 @@ async def login(
 
     token = create_access_token({"sub": str(user["_id"]), "name": user["name"]})
     response.set_cookie("session_token", token, httponly=True, max_age=60 * 60 * 24 * 7)
-    return {"msg": "Login realizado com sucesso"}
+    return JSONResponse(status_code=200, headers={"HX-Redirect": "/"})
 
 @router.get("/logout")
 def logout(response: Response):

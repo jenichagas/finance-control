@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "../utils/variables" as vars;
+@use "../utils/functions" as f;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow($intensity: "medium") {
+  @if $intensity == "light" {
+    box-shadow: 0 5px 15px rgba(f.theme(primary-color), 0.2);
+  } @else if $intensity == "medium" {
+    box-shadow: 0 15px 35px f.theme(box-shadow-color);
+  } @else if $intensity == "heavy" {
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin export-theme-vars($theme-name) {
+  $theme-map: map.get(vars.$theme, $theme-name);
+
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+}

@@ -1,0 +1,15 @@
+// app/templates/utils/_root-vars.scss
+@use "./variables" as vars;
+@use "./mixins" as m;
+
+:root {
+  @include m.export-theme-vars("default");
+}
+
+[data-theme="dark"] {
+  @include m.export-theme-vars("dark");
+}
+
+[data-theme="default"] {
+  @include m.export-theme-vars("default");
+}

@@ -1,0 +1,7 @@
+@use "sass:map";
+@use "./variables" as vars;
+
+@function theme($property) {
+  $theme-map: map.get(vars.$theme, "default"); // você pode mudar para "dark" se quiser testar
+  @return map.get($theme-map, $property);
+}
