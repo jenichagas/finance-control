@@ -7,7 +7,7 @@ from bson import ObjectId
 
 router = APIRouter()
 
-@router.post("/meus-perfil")
+@router.post("/meu-perfil")
 async def update_profile(
     request: Request,
     name: str = Form(...),

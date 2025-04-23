@@ -1,16 +1,46 @@
-{% extends "bases/auth-control/auth-control.html" %}
+{% extends "bases/auth-control/auth-control.html" %} {% block content %}
+{%include "partials/login-form/components/particles.html"%}
 
-{% block content %}
-  <form method="post" action="/login" class="form-box">
-    <h1>Redefinir senha</h1>
+<div class="login-container">
+    <div class="login-header">
+        <div class="logo">
+            {%include "partials/components/icons/logo-icon.svg"%}
+        </div>
+        <h1>Redefinir senha</h1>
+        <p>
+            Para recuperar sua senha, informe o e-mail cadastrado. Se houver uma
+            conta associada, você receberá um link para redefinir sua senha.
+        </p>
+    </div>
 
-    <label for="email">Senha</label>
-    <input type="password" name="password" required />
+    <form
+        method="POST"
+        action="/register"
+        hx-post="/register"
+        hx-target="body"
+        hx-swap="outerHTML"
+    >
+        <div class="form-group">
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder=" "
+                name="email"
+            />
+            <label for="email" class="form-label">Email</label>
+        </div>
 
-    <label for="password">Senha</label>
-    <input type="password" name="password" required />
+        <button type="submit" class="login-btn">
+            <span>Enviar</span>
+        </button>
+    </form>
+    <div class="footer-links links">
+        <a
+            href="/login"
+            >voltar ao login</a
+        >
+    </div>
+</div>
 
-    <button type="submit" class="btn">Enviar</button>
-
-  </form>
 {% endblock %}

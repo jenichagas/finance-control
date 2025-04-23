@@ -1,53 +1,56 @@
 {% extends "bases/auth-control/auth-control.html" %} {% block content %}
 {%include "partials/login-form/components/particles.html"%}
-
-<div class="login-container">
-    <div class="login-header">
-        <div class="logo">
-            {%include "partials/components/icons/logo-icon.svg"%}
-        </div>
-        <h1>Bem-vindo</h1>
-        <p>Acesse sua conta para gerenciar suas finanças</p>
-    </div>
-
-    <form hx-post="/login" hx-target="body" hx-swap="outerHTML" hx-boost="false">
-        <div class="form-group">
-            <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder=" "
-            />
-            <label for="email" class="form-label">Email</label>
-        </div>
-        <div class="form-group">
-            <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder=" "
-            />
-            <label for="password" class="form-label">Senha</label>
+<div class="background">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">
+                {%include "partials/components/icons/logo-icon.svg"%}
+            </div>
+            <h1>Bem-vindo</h1>
+            <p>Acesse sua conta para gerenciar suas finanças</p>
         </div>
 
-        <button type="submit" class="login-btn">
-            <span>Entrar</span>
-        </button>
-    </form>
+        <form hx-post="/login" hx-target="body" hx-swap="innerHTML">
+            <div class="form-group">
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder=" "
+                    name="email"
+                />
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+                <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder=" "
+                    name="password"
+                />
+                <label for="password" class="form-label">Senha</label>
+            </div>
 
-    <div class="footer-links">
-        <a href="#">Esqueceu a senha?</a>
-        <a href="#">Criar conta</a>
-    </div>
+            <button type="submit" class="login-btn">
+                <span>Entrar</span>
+            </button>
+        </form>
 
-    <div class="social-divider">
-        <span>ou continue com</span>
-    </div>
-
-    <div class="social-buttons">
-        <a href="#" class="social-btn">G</a>
-        <a href="#" class="social-btn">f</a>
-        <a href="#" class="social-btn">in</a>
+        <div class="footer-links">
+            <a href="/reset">Esqueceu a senha?</a>
+            <a href="/register">Criar conta</a>
+        </div>
+        <!-- 
+        <div class="social-divider">
+            <span>ou continue com</span>
+        </div>
+    
+        <div class="social-buttons">
+            <a href="#" class="social-btn">G</a>
+            <a href="#" class="social-btn">f</a>
+            <a href="#" class="social-btn">in</a>
+        </div> -->
     </div>
 </div>
 

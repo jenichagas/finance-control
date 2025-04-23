@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <title>Orçana | Login</title>
-  <link rel="stylesheet" href="/statics/dist/main.css" />
-  <script type="module" src="/statics/dist/main.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <head>
+        <meta charset="UTF-8" />
+        <title>Orçana | Login</title>
+        <link rel="stylesheet" href="/statics/dist/main.css" />
+        <script type="module" src="/statics/dist/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="auth-layout">
+        <!-- <div class="error-message" x-data="{ show: true }" x-show="show">
+            <p>
+                {{ message if message else "Ocorreu um erro inesperado. Tente
+                novamente." }}
+            </p>
+            <button @click="show = false" style="margin-top: 8px">
+                Fechar
+            </button>
+        </div> -->
 
-</head>
-<body class="auth-layout">
-  <main class="auth-container">
-    {% block content %}{% include partial %}{% endblock %}
-  </main>
-</body>
+        <main class="auth-container">
+            {% block content %}{% include partial %}{% endblock %}
+        </main>
+    </body>
 </html>

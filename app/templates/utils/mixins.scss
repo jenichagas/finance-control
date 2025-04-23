@@ -8,6 +8,25 @@
   justify-content: center;
 }
 
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card-style {
+  background-color: $bg-white;
+  border-radius: $card-radius;
+  padding: 20px;
+  box-shadow: $shadow;
+}
+
 @mixin box-shadow($intensity: "medium") {
   @if $intensity == "light" {
     box-shadow: 0 5px 15px rgba(f.theme(primary-color), 0.2);

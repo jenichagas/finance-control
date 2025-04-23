@@ -1,34 +1,96 @@
-<div class="dashboard">
-    <h2>Bem-vindo(a), {{ user_name }} 👋</h2>
-  
-    <section class="resumo">
-      <div class="card">
-        <h3>Saldo disponível</h3>
-        <p>R$ {{ saldo }}</p>
-      </div>
-      <div class="card">
-        <h3>Gasto no mês</h3>
-        <p>R$ {{ gasto_total }}</p>
-      </div>
-    </section>
-  
-    <section class="grafico-categorias">
-      <h3>Distribuição por categoria</h3>
-      <div id="grafico-categorias"></div>
-    </section>
-  
-    <section class="ultimos-lancamentos">
-      <h3>Últimos lançamentos</h3>
-      <ul>
-        {% for d in dividas %}
-        <li>{{ d.name }} - R$ {{ d.value }} em {{ d.category }}</li>
-        {% endfor %}
-      </ul>
-    </section>
-  
-    <div class="atalhos">
-      <a href="/nova-divida" class="btn">+ Nova dívida</a>
-      <a href="/orcamento" class="btn">Ver orçamento</a>
-    </div>
-  </div>
-  
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="user-profile">
+            <img src="statics/images/user-image.jpeg" alt="User" />
+            <h2>Jeniffer Chagas</h2>
+            <p>Estagiária</p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="active"><i class="icon dashboard"></i>Dashboard</li>
+                <li><i class="icon wallet">{%include "partials/components/icons/wallet-icon.svg" %}</i>Carteira</li>
+                <li><i class="icon transactions"></i>Transações</li>
+                <li><i class="icon search"></i>Busca</li>
+            </ul>
+        </nav>
+        <div class="menu-footer">
+            <ul>
+                <li><i class="icon setting"></i>Configurações</li>
+                <li><i class="icon help"></i>Ajude</li>
+                <li><i class="icon logout"></i>Sair</li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <input type="text" placeholder="Search" class="search-bar" />
+            <div class="notifications">
+                <i class="icon bell">
+                    {%include
+                    "partials/components/icons/notification-icon.svg"%}
+                </i>
+            </div>
+        </header>
+
+        <section class="dashboard-grid">
+            <div class="card card-blue">
+                <h3>4328 4388 4161 8183</h3>
+                <p>Marcel Dias<br /><small>12/31</small></p>
+                <div class="card-logo"></div>
+            </div>
+
+            <div class="card wallet-balance">
+                <h2>R$4,523.98</h2>
+                <p>
+                    <span class="income">R$3,030.98</span>
+                    <span class="expenses">R$223.98</span>
+                </p>
+            </div>
+
+            <div class="card payable-accounts">
+                <h4>Payable Accounts</h4>
+                <p>Keep your accounts up to date to avoid issues.</p>
+                <div class="progress"><span style="width: 87.5%"></span></div>
+                <p><strong>14 OUT OF 16</strong></p>
+            </div>
+
+            <div class="card transactions">
+                <h4>Transações</h4>
+                <ul>
+                    <li>Shopping - Nov 25 - R$300</li>
+                    <li>Shopping - Nov 25 - R$300</li>
+                    <li>Shopping - Nov 25 - R$300</li>
+                    <li>Shopping - Nov 25 - R$300</li>
+                </ul>
+            </div>
+
+            <div class="card chart">
+                <h4>Monthly earnings</h4>
+                <div class="chart-placeholder">Grafico</div>
+            </div>
+
+            <div class="card earnings">
+                <h4>Earnings</h4>
+                <div class="circular-progress">$4,523.98</div>
+            </div>
+
+            <div class="card receipts">
+                <h4>Receipts</h4>
+                <ul>
+                    <li>$5,000.00 - Salary</li>
+                    <li>$593.00 - Service</li>
+                    <li>$3,030.98 - Rent or Mortgage</li>
+                </ul>
+            </div>
+
+            <div class="card payables">
+                <h4>Payables</h4>
+                <ul>
+                    <li>$202.98 - Electricity Bill</li>
+                    <li>$3,030.98 - Rent or Mortgage</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>

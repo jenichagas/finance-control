@@ -1,8 +1,9 @@
 @use "../../utils/mixins.scss" as m;
 
-body {
+.auth-container {
     background-color: var(--background-color);
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,6 +218,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
+    cursor: pointer;
 
     a {
         color: var(--text-muted);
@@ -228,6 +230,14 @@ body {
             color: var(--primary-color);
         }
     }
+
+    
+    
+}
+
+.links {
+    display: flex;
+    justify-content: center;
 }
 
 .social-divider {
@@ -280,4 +290,5 @@ body {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
     }
+
 }

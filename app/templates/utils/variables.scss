@@ -3,7 +3,7 @@ $theme: (
     primary-color: #00a8cc,
     secondary-color: #0088a9,
     accent-color: #5ad8a6,
-    dark-color: #2d3436,
+    dark-color: #000000,
     light-color: #1a1a1a,
     background-color: #edf2f7,
     box-shadow-color: rgba(0, 0, 0, 0.1),
@@ -16,7 +16,7 @@ $theme: (
     primary-color: #00c2cb,
     secondary-color: #005f73,
     accent-color: #7fffd4,
-    dark-color: #f5f5f5,
+    dark-color: #000000,
     light-color: #e7e5e5,
     background-color: #121212,
     box-shadow-color: rgba(255, 255, 255, 0.05),
@@ -25,3 +25,4 @@ $theme: (
     transition-standard: all 0.3s ease
   )
 );
+

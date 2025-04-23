@@ -1,33 +1,66 @@
 {% extends "bases/auth-control/auth-control.html" %} {% block content %}
-<div
-    x-data="{ open: {{ 'true' if success else 'false' }} }"
-    x-show="open"
-    x-transition
-    class="alert alert-success"
->
-    Cadastro realizado com sucesso!
+{%include "partials/login-form/components/particles.html"%}
+
+<div class="login-container">
+    <div class="login-header">
+        <div class="logo">
+            {%include "partials/components/icons/logo-icon.svg"%}
+        </div>
+        <h1>Faça Parte</h1>
+        <p>Crie uma conta para gerenciar suas finanças</p>
+    </div>
+
+    <form
+        method="POST"
+        action="/register"
+        hx-post="/register"
+        hx-target="body"
+        hx-swap="outerHTML"
+    >
+        <div class="form-group">
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder=" "
+                name="email"
+            />
+            <label for="email" class="form-label">Email</label>
+        </div>
+        <div class="form-group">
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder=" "
+                name="password"
+            />
+            <label for="password" class="form-label">Senha</label>
+        </div>
+
+        <button type="submit" class="login-btn">
+            <span>Criar</span>
+        </button>
+    </form>
+    <div class="footer-links links">
+        <a href="/login">voltar ao login</a>
+    </div>
 </div>
-<form method="post" action="/register" class="form-box">
-    <h1>Crie uma conta</h1>
-    <label for="name">Nome</label>
-    <input type="text" />
 
-    <label for="email">E-mail</label>
-    <input type="email" name="email" required />
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const particles = document.querySelectorAll(".particle");
 
-    <label for="password">Crie uma senha</label>
-    <input type="password" name="password" required />
+        particles.forEach((particle, index) => {
+            const delay = index * 2;
+            particle.style.animationDelay = `${delay}s`;
 
-    <button type="submit" class="btn">Criar</button>
-</form>
-{% if error == "email" %}
-<div
-    x-data="{ show: true }"
-    x-show="show"
-    x-transition
-    x-init="setTimeout(() => show = false, 4000)"
-    class="alert alert-error"
->
-    Este e-mail já está em uso. Tente outro.
-</div>
-{% endif %} {% endblock %}
+            const randomX = Math.random() * 20 - 10;
+            const randomY = Math.random() * 20 - 10;
+
+            particle.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        });
+    });
+</script>
+
+{% endblock %}

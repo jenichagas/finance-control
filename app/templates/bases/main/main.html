@@ -13,6 +13,20 @@
         <title>Orçana</title>
     </head>
     <body data-theme="default">
+        {% if error %}
+        <div
+            id="globalErrorContainer"
+            class="global-message-container global-error"
+        >
+            <span
+                class="close-btn"
+                onclick="this.parentElement.classList.add('hidden')"
+                >&times;</span
+            >
+            <div>{{ error }}</div>
+        </div>
+        {% endif %}
+        
         {% block content %}
         <div id="main">{% include partial %}</div>
         {%endblock%}
@@ -26,6 +40,17 @@
                 const saved = localStorage.getItem("theme") || "default";
                 document.body.setAttribute("data-theme", saved);
             });
+
+            const errorContainer = document.getElementById('globalErrorContainer');
+            if (errorContainer) {
+                setTimeout(() => {
+                    errorContainer.classList.add('hidden');
+                }, 5000);
+            }
+        </script>
+        <script type="module">
+            import htmx from "/statics/dist/htmx.min.js";
+            window.htmx = htmx;
         </script>
     </body>
 </html>

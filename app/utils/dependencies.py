@@ -1,19 +1,22 @@
+from jose import jwt, JWTError
 from fastapi import Request
 from app.utils.security import decode_token
 from bson import ObjectId
 from app.config.mongodb import db
+from app.config.settings import SECRET_KEY, ALGORITHM
 
 async def get_current_user(request: Request):
     token = request.cookies.get("session_token")
+
+    print("TOKEN ENCONTRADO:", token)  # <-- AQUI
+
     if not token:
         return None
 
-    payload = decode_token(token)
-    if not payload:
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        print("PAYLOAD:", payload)  # <-- AQUI
+        return payload
+    except JWTError as e:
+        print("ERRO AO DECODIFICAR TOKEN:", e)
         return None
-
-    user_id = payload.get("sub")
-    if not user_id:
-        return None
-
-    return await db.users.find_one({"_id": ObjectId(user_id)})
