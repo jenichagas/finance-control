@@ -164,6 +164,9 @@
 .border-primary {
     border: 1px solid var(--primary);
 }
+.border-bottom {
+    border-bottom: 0.01rem solid var(--secondary-color);
+}
 
 /* === CORES === */
 .bg-white {

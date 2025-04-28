@@ -1,4 +1,4 @@
-CATEGORIES = [
+categories = [
     {"name": "Casa", "color": "#2980B9", "icon": "home"},
     {"name": "Eletrônicos", "color": "#9B59B6", "icon": "tv"},
     {"name": "Alimentação", "color": "#E67E22", "icon": "utensils"},

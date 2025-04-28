@@ -4,13 +4,13 @@
         @click="openDropdown =!openDropdown"
         style="background-color: var(--background-input)"
     >
-        Selecione uma categoria
+        <p>Selecione uma categoria</p>
     </div>
 
     <div class="dropdown-menu" x-show="openDropdown" x-transition>
-        {% for category in CATEGORIES %}
-        <div class="dropdown-item">
-            <span>{{ category.name }}</span>
+        {% for category in categories %}
+        <div class="dropdown-item ">
+            <p>{{ category.name }}</p>
         </div>
         {% endfor %}
     </div>

@@ -1,8 +1,21 @@
-<aside class="sidebar">
-    <div class="icon-back-sidebar cursor-pointer">
-        {%include "partials/components/icons/arrow-back-icon.svg"%}
+<aside
+    class="sidebar"
+    x-data="sidebarControl"
+    :class="{'sidebar-collapse': !isOpen}"
+>
+    <div class="icon-back-sidebar cursor-pointer" @click="isOpen = !isOpen">
+        <template x-if="isOpen">
+            <div>
+                {%include "partials/components/icons/arrow-right-icon.svg"%}
+            </div>
+        </template>
+        <template x-if="!isOpen">
+            <div>
+                {% include "partials/components/icons/arrow-left-icon.svg" %}
+            </div>
+        </template>
     </div>
-    <div class="user-profile">
+    <div class="user-profile" x-show="isOpen" x-transition.opacity>
         <img src="statics/images/user-image.jpeg" alt="User" />
         <h2>Jeniffer Chagas</h2>
         <a href="#" class="cursor-pointer">Meu perfil</a>
@@ -11,47 +24,54 @@
         <ul>
             <li class="active">
                 <i class="icon dashboard"
-                    >{%include
-                    "partials/components/icons/data-icon.svg"%}</i
-                >Dashboard
+                    >{% include "partials/components/icons/data-icon.svg" %}</i
+                >
+                <span x-show="isOpen" x-transition>Dashboard</span>
             </li>
             <li>
                 <i class="icon wallet"
-                    >{%include "partials/components/icons/wallet-icon.svg"
+                    >{% include "partials/components/icons/wallet-icon.svg"
                     %}</i
-                >Carteira
+                >
+                <span x-show="isOpen" x-transition>Carteira</span>
             </li>
             <li>
                 <i class="icon transactions"
-                    >{%include
-                    "partials/components/icons/transations-icon.svg"%} </i
-                >Transações
+                    >{% include "partials/components/icons/transations-icon.svg"
+                    %}</i
+                >
+                <span x-show="isOpen" x-transition>Transações</span>
             </li>
             <li>
                 <i class="icon search"
-                    >{%include
-                    "partials/components/icons/search-icon.svg"%}</i
-                >Busca
+                    >{% include "partials/components/icons/search-icon.svg"
+                    %}</i
+                >
+                <span x-show="isOpen" x-transition>Busca</span>
             </li>
         </ul>
     </nav>
+
     <div class="menu-footer">
         <ul>
             <li>
-                <i class="icon setting">
-                    {%include
-                    "partials/components/icons/settings-icon.svg"%} </i
-                >Configurações
+                <i class="icon setting"
+                    >{% include "partials/components/icons/settings-icon.svg"
+                    %}</i
+                >
+                <span x-show="isOpen" x-transition>Configurações</span>
             </li>
             <li>
-                <i class="icon help">
-                    {%include "partials/components/icons/help-icon.svg"%} </i
-                >Ajuda
+                <i class="icon help"
+                    >{% include "partials/components/icons/help-icon.svg" %}</i
+                >
+                <span x-show="isOpen" x-transition>Ajuda</span>
             </li>
             <li>
-                <i class="icon logout">
-                    {%include "partials/components/icons/out-icon.svg"%} </i
-                >Sair
+                <i class="icon logout"
+                    >{% include "partials/components/icons/out-icon.svg" %}</i
+                >
+                <span x-show="isOpen" x-transition>Sair</span>
             </li>
         </ul>
     </div>

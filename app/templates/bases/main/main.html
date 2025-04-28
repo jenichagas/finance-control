@@ -28,7 +28,7 @@
         {% endif %}
         
         {% block content %}
-        <div id="main">{% include partial %}</div>
+        <div id="main">{% include partial with context%}</div>
         {%endblock%}
 
         <script>

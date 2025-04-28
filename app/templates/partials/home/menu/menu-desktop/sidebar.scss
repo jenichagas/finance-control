@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+    transition: width 0.3s ease, padding 0.3s ease;
 
     .icon-back-sidebar {
         display: flex;
@@ -57,3 +58,17 @@
         }
     }
 }
+
+.sidebar-collapsed {
+    width: 80px;
+    padding: 1rem 0.5rem;
+  
+    .user-profile {
+      display: none;
+    }
+  
+    .menu ul li span,
+    .menu-footer ul li span {
+      display: none;
+    }
+  }

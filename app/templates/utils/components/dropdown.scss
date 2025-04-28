@@ -1,0 +1,37 @@
+.dropdown {
+    position: relative;
+    width: 100%;
+  
+    .dropdown-menu {
+      position: absolute;
+      width: 100%;
+      margin-top: 0.5rem;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 10;
+    }
+  
+    .dropdown-item {
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+  
+      &:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+  
+      &.no-category {
+        text-align: center;
+        color: var(--text-muted);
+        font-style: italic;
+        cursor: default;
+      }
+    }
+  }
+  

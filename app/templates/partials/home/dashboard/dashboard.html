@@ -1,31 +1,50 @@
-<div class="dashboard-layout">
+<div class="dashboard-layout" x-data="dashboardControl">
     {%include "partials/home/menu/menu-desktop/sidebar.html"%}
 
     <main class="main-content flex flex-column gap-4">
         {%include "partials/home/navbar/navbar.html"%}
-        <div class="flex justify-end">
-            <button class="button">
-                Fevereiro
-                <template>
-                    <div x-show="isClicked">
-                        {%include
-                        "partials/components/icons/arrow-up-filter-icon.svg"%}
-                    </div>
-                    <div x-show="!isClicked">
-                        {%include
-                        "partials/components/icons/arrow-down-filter-icon.svg"%}
-                    </div>
-                </template>
-            </button>
+        <div class="flex flex-column items-end">
+            <div style="width: 8rem">
+                <button class="button" @click="isOpen = !isOpen">
+                    Fevereiro
+                    <template x-if="isOpen">
+                        <div>
+                            {% include
+                            "partials/components/icons/arrow-up-filter-icon.svg"
+                            %}
+                        </div>
+                    </template>
+                    <template x-if="!isOpen">
+                        <div>
+                            {% include
+                            "partials/components/icons/arrow-down-filter-icon.svg"
+                            %}
+                        </div>
+                    </template>
+                </button>
+                {%include
+                "partials/home/dashboard/components/dropdown-month.html"%}
+            </div>
         </div>
         <section class="dashboard-grid">
             <div class="card card-blue">
                 <div class="icon-container">
                     <h3>Salário</h3>
-                    <i
-                        >{%include
-                        "partials/components/icons/eye-open-icon.svg"%}</i
-                    >
+                    <div @click="showSalary = !showSalary" class="cursor-pointer">
+                        <template x-if="showSalary">
+                            <div>
+                                {%include
+                                "partials/components/icons/eye-open-icon.svg"%}
+                            </div>
+                        </template>
+                        <template x-if="!showSalary">
+                            <div>
+                                {% include
+                                "partials/components/icons/eye-close-icon.svg"
+                                %}
+                            </div>
+                        </template>
+                    </div>
                 </div>
                 <h2>R$5,560</h2>
                 <div class="icon-wallet">
