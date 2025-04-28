@@ -1,8 +1,11 @@
 @use "../../utils/root-vars";
 @use "../../utils/variables.scss" as *;
 @use "../../utils/reset.scss";
-@use "../../utils/components/util-style.scss";
+@use "../../utils/components/style.scss";
 @use "../../utils/components/button.scss";
+@use "../../utils/components/typography.scss";
+
+
 
 
 @use "../../partials/login-form/login-form.scss";

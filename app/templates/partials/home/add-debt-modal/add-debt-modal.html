@@ -1,0 +1,27 @@
+<div class="overlay">
+    <div class="form-container">
+        <form class="flex flex-column gap-2">
+            <div>
+                <label for="debt-name"></label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="debt-value">Valor</label>
+                <input type="number">
+            </div>
+            <div>
+                <label for="debt-category">Categoria</label>
+                {%include "partials/home/add-debt-modal/components/dropdown.html" %}
+            </div>
+            <div>
+                <label for="debt-start-date">Início</label>
+                <input type="number">
+            </div>
+            <div>
+                <label for="debt-installments">Parcelas</label>
+                <input type="number">
+            </div>
+        </form>
+        <button type="submit" class="button">Adicionar</button>
+    </div>
+</div>

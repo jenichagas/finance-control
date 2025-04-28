@@ -1,0 +1,12 @@
+<div class="dropdown">
+    <button class="dropdown-toggle">Selecione uma Categoria</button>
+    <div class="dropdown-menu">
+      {% for category in CATEGORIES %}
+      <div class="dropdown-item" style="--color: {{ category.color }}">
+        <i class="icon">{{ category.icon }}</i>
+        <span>{{ category.name }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
