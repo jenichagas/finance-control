@@ -5,8 +5,17 @@
         {%include "partials/home/navbar/navbar.html"%}
         <div class="flex justify-end">
             <button class="button">
-                Fevereiro {%include
-                "partials/components/icons/arrow-filter-icon.svg"%}
+                Fevereiro
+                <template>
+                    <div x-show="isClicked">
+                        {%include
+                        "partials/components/icons/arrow-up-filter-icon.svg"%}
+                    </div>
+                    <div x-show="!isClicked">
+                        {%include
+                        "partials/components/icons/arrow-down-filter-icon.svg"%}
+                    </div>
+                </template>
             </button>
         </div>
         <section class="dashboard-grid">

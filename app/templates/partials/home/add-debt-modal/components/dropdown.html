@@ -1,9 +1,8 @@
-<div class="dropdown">
-    <button class="dropdown-toggle">Selecione uma Categoria</button>
+<div class="dropdown" >
+    <button class="input-form" @click.away="close" @click="toggle">Selecione uma Categoria</button>
     <div class="dropdown-menu">
       {% for category in CATEGORIES %}
-      <div class="dropdown-item" style="--color: {{ category.color }}">
-        <i class="icon">{{ category.icon }}</i>
+      <div class="dropdown-item">
         <span>{{ category.name }}</span>
       </div>
       {% endfor %}
