@@ -1,175 +1,119 @@
-
 .dashboard-layout {
     height: 100svh;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  color: var(--dark-color);
-}
-
-.sidebar {
-  width: 240px;
-  background-color: #f9fbfc;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
-
-  .user-profile {
-    text-align: center;
-    img {
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-size: 1rem;
-      margin: 0.5rem 0 0.2rem;
-    }
-    p {
-      color: var(--text-muted);
-      font-size: 0.875rem;
-    }
-  }
-
-  .menu, .menu-footer {
-    ul {
-      list-style: none;
-      padding: 0;
-      li {
-        padding: 0.75rem 1rem;
-        border-radius: 10px;
-        margin: 0.25rem 0;
-        cursor: pointer;
-        font-size: 0.95rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-
-        &.active, &:hover {
-          background: var(--gradient);
-          color: white;
-        }
-      }
-    }
-  }
-}
-
-.main-content {
-  flex: 1;
-  padding: 2rem;
-
-  .topbar {
+    font-family: "Poppins", sans-serif;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+}
+.main-content {
+    flex: 1;
+    padding: 2rem;
 
-    .search-bar {
-      width: 250px;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      outline: none;
-    }
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.5rem;
+        flex-wrap: wrap;
 
-    .notifications i {
-      margin-left: 1rem;
-      cursor: pointer;
-    }
-  }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 
-  .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.5rem;
-    flex-wrap: wrap;
+            h4 {
+                margin-bottom: 1rem;
+            }
 
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            &.card-blue {
+                background: linear-gradient(135deg, #00a7cc9f, #0087a9a6);
+                color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
 
-      h4 {
-        margin-bottom: 1rem;
-      }
+                h2 {
+                    font-size: 2rem;
+                }
 
-      &.card-blue {
-        background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
-        color: #1a1a1a;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-      }
+                .icon-container {
+                    display: flex;
+                    justify-content: space-between;
+                }
 
-      &.wallet-balance {
-        h2 {
-          font-size: 2rem;
-          margin-bottom: 0.5rem;
+                .icon-wallet {
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+
+            &.wallet-balance {
+                h2 {
+                    font-size: 2rem;
+                    margin-bottom: 0.5rem;
+                }
+                .income {
+                    color: green;
+                    margin-right: 1rem;
+                }
+                .expenses {
+                    color: red;
+                }
+            }
+
+            &.payable-accounts {
+                .progress {
+                    background: #f1f1f1;
+                    border-radius: 10px;
+                    height: 8px;
+                    margin: 0.5rem 0;
+                    span {
+                        display: block;
+                        height: 100%;
+                        border-radius: 10px;
+                        background: var(--primary-color);
+                    }
+                }
+            }
+
+            &.transactions,
+            &.receipts,
+            &.payables {
+                ul {
+                    padding-left: 1rem;
+                    li {
+                        margin: 0.25rem 0;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            &.chart .chart-placeholder {
+                background: #f0f0f0;
+                height: 120px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.earnings .circular-progress {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 8px solid #00a8cc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                margin: 0 auto;
+            }
         }
-        .income {
-          color: green;
-          margin-right: 1rem;
-        }
-        .expenses {
-          color: red;
-        }
-      }
 
-      &.payable-accounts {
-        .progress {
-          background: #f1f1f1;
-          border-radius: 10px;
-          height: 8px;
-          margin: 0.5rem 0;
-          span {
-            display: block;
-            height: 100%;
-            border-radius: 10px;
-            background: var(--primary-color);
-          }
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
         }
-      }
-
-      &.transactions, &.receipts, &.payables {
-        ul {
-          padding-left: 1rem;
-          li {
-            margin: 0.25rem 0;
-            font-size: 0.9rem;
-          }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
         }
-      }
-
-      &.chart .chart-placeholder {
-        background: #f0f0f0;
-        height: 120px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &.earnings .circular-progress {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 8px solid #00a8cc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        margin: 0 auto;
-      }
     }
-
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
 }

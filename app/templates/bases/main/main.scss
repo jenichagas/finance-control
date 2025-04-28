@@ -1,10 +1,16 @@
 @use "../../utils/root-vars";
 @use "../../utils/variables.scss" as *;
 @use "../../utils/reset.scss";
+@use "../../utils/components/util-style.scss";
+@use "../../utils/components/button.scss";
+
 
 @use "../../partials/login-form/login-form.scss";
 @use "../../partials/home/home/home.scss";
 @use "../../partials/home/dashboard/dashboard.scss";
+@use "../../partials/home/navbar/navbar.scss";
+@use "../../partials/home/menu/menu-desktop/sidebar.scss";
+
 
 
 .global-message-container {

@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+
+    .search-bar {
+        width: 250px;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .notifications i {
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}

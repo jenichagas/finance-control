@@ -4,7 +4,7 @@ $theme: (
     secondary-color: #0088a9,
     accent-color: #5ad8a6,
     dark-color: #000000,
-    light-color: #1a1a1a,
+    light-color: #ffffff,
     background-color: #edf2f7,
     box-shadow-color: rgba(0, 0, 0, 0.1),
     text-muted: #718096,
@@ -12,17 +12,17 @@ $theme: (
     transition-standard: all 0.3s ease
   ),
 
-  dark: ( 
-    primary-color: #00c2cb,
-    secondary-color: #005f73,
-    accent-color: #7fffd4,
-    dark-color: #000000,
-    light-color: #e7e5e5,
-    background-color: #121212,
-    box-shadow-color: rgba(255, 255, 255, 0.05),
-    text-muted: #a0aec0,
-    gradient: linear-gradient(135deg, #00c2cb, #7fffd4),
-    transition-standard: all 0.3s ease
-  )
+  // dark: ( 
+  //   primary-color: #00c2cb,
+  //   secondary-color: #005f73,
+  //   accent-color: #7fffd4,
+  //   dark-color: #000000,
+  //   light-color: #e7e5e5,
+  //   background-color: #121212,
+  //   box-shadow-color: rgba(255, 255, 255, 0.05),
+  //   text-muted: #a0aec0,
+  //   gradient: linear-gradient(135deg, #00c2cb, #7fffd4),
+  //   transition-standard: all 0.3s ease
+  // )
 );
 

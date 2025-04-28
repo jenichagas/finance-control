@@ -1,43 +1,27 @@
 <div class="dashboard-layout">
-    <aside class="sidebar">
-        <div class="user-profile">
-            <img src="statics/images/user-image.jpeg" alt="User" />
-            <h2>Jeniffer Chagas</h2>
-            <p>Estagiária</p>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li class="active"><i class="icon dashboard"></i>Dashboard</li>
-                <li><i class="icon wallet">{%include "partials/components/icons/wallet-icon.svg" %}</i>Carteira</li>
-                <li><i class="icon transactions"></i>Transações</li>
-                <li><i class="icon search"></i>Busca</li>
-            </ul>
-        </nav>
-        <div class="menu-footer">
-            <ul>
-                <li><i class="icon setting"></i>Configurações</li>
-                <li><i class="icon help"></i>Ajude</li>
-                <li><i class="icon logout"></i>Sair</li>
-            </ul>
-        </div>
-    </aside>
+    {%include "partials/home/menu/menu-desktop/sidebar.html"%}
 
-    <main class="main-content">
-        <header class="topbar">
-            <input type="text" placeholder="Search" class="search-bar" />
-            <div class="notifications">
-                <i class="icon bell">
-                    {%include
-                    "partials/components/icons/notification-icon.svg"%}
-                </i>
-            </div>
-        </header>
-
+    <main class="main-content flex flex-column gap-4">
+        {%include "partials/home/navbar/navbar.html"%}
+        <div class="flex justify-end">
+            <button class="button">
+                Fevereiro {%include
+                "partials/components/icons/arrow-filter-icon.svg"%}
+            </button>
+        </div>
         <section class="dashboard-grid">
             <div class="card card-blue">
-                <h3>4328 4388 4161 8183</h3>
-                <p>Marcel Dias<br /><small>12/31</small></p>
-                <div class="card-logo"></div>
+                <div class="icon-container">
+                    <h3>Salário</h3>
+                    <i
+                        >{%include
+                        "partials/components/icons/eye-open-icon.svg"%}</i
+                    >
+                </div>
+                <h2>R$5,560</h2>
+                <div class="icon-wallet">
+                    {%include "partials/components/icons/coin-icon.svg"%}
+                </div>
             </div>
 
             <div class="card wallet-balance">
@@ -49,22 +33,24 @@
             </div>
 
             <div class="card payable-accounts">
-                <h4>Payable Accounts</h4>
-                <p>Keep your accounts up to date to avoid issues.</p>
+                <h4>Sálário gasto</h4>
+                <p>...</p>
                 <div class="progress"><span style="width: 87.5%"></span></div>
-                <p><strong>14 OUT OF 16</strong></p>
+                <p></p>
+                <p><strong>18 DE OUT 2025</strong></p>
             </div>
 
             <div class="card transactions">
-                <h4>Transações</h4>
-                <ul>
-                    <li>Shopping - Nov 25 - R$300</li>
-                    <li>Shopping - Nov 25 - R$300</li>
-                    <li>Shopping - Nov 25 - R$300</li>
-                    <li>Shopping - Nov 25 - R$300</li>
-                </ul>
+                <h4>Despesas</h4>
+                <div class="flex align-center">
+                    <i>
+                        {%include
+                        "partials/components/icons/expenses-icon.svg"%}
+                    </i>
+                    <p>Shopping - Nov 25 - R$300</p>
+                </div>
             </div>
-
+            <!-- 
             <div class="card chart">
                 <h4>Monthly earnings</h4>
                 <div class="chart-placeholder">Grafico</div>
@@ -90,7 +76,7 @@
                     <li>$202.98 - Electricity Bill</li>
                     <li>$3,030.98 - Rent or Mortgage</li>
                 </ul>
-            </div>
+            </div> -->
         </section>
     </main>
 </div>

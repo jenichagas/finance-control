@@ -1,47 +1,58 @@
-<div class="sidebar">
-    <div class="profile">
-        <div class="profile-img">
-            <img src="/api/placeholder/80/80" alt="Profile Picture" />
-        </div>
-        <h3 class="profile-name">Gadiel Machado</h3>
-        <p class="profile-role">Designer</p>
+<aside class="sidebar">
+    <div class="icon-back-sidebar">
+        {%include "partials/components/icons/arrow-back-icon.svg"%}
     </div>
-
-    <div class="menu">
-        <a href="#" class="menu-item active">
-            <i class="icon-dashboard"></i>
-            Dashboard
-        </a>
-        <a href="#" class="menu-item">
-            <i class="icon-wallet"></i>
-            Wallet
-        </a>
-        <a href="#" class="menu-item">
-            <i class="icon-transactions"></i>
-            Transactions
-        </a>
-        <a href="#" class="menu-item">
-            <i class="icon-analytics"></i>
-            Revenue analytics
-        </a>
-        <a href="#" class="menu-item">
-            <i class="icon-search"></i>
-            Search
-        </a>
-
-        <div class="bottom-menu">
-            <a href="#" class="menu-item">
-                <i class="icon-settings"></i>
-                Setting
-            </a>
-            <a href="#" class="menu-item">
-                <i class="icon-help"></i>
-                Help
-            </a>
-            <a href="#" class="menu-item">
-                <i class="icon-logout"></i>
-                Log Out
-            </a>
-        </div>
+    <div class="user-profile">
+        <img src="statics/images/user-image.jpeg" alt="User" />
+        <h2>Jeniffer Chagas</h2>
+        <p>Estagiária</p>
     </div>
-</div>
+    <nav class="menu">
+        <ul>
+            <li class="active">
+                <i class="icon dashboard"
+                    >{%include
+                    "partials/components/icons/data-icon.svg"%}</i
+                >Dashboard
+            </li>
+            <li>
+                <i class="icon wallet"
+                    >{%include "partials/components/icons/wallet-icon.svg"
+                    %}</i
+                >Carteira
+            </li>
+            <li>
+                <i class="icon transactions"
+                    >{%include
+                    "partials/components/icons/transations-icon.svg"%} </i
+                >Transações
+            </li>
+            <li>
+                <i class="icon search"
+                    >{%include
+                    "partials/components/icons/search-icon.svg"%}</i
+                >Busca
+            </li>
+        </ul>
+    </nav>
+    <div class="menu-footer">
+        <ul>
+            <li>
+                <i class="icon setting">
+                    {%include
+                    "partials/components/icons/settings-icon.svg"%} </i
+                >Configurações
+            </li>
+            <li>
+                <i class="icon help">
+                    {%include "partials/components/icons/help-icon.svg"%} </i
+                >Ajuda
+            </li>
+            <li>
+                <i class="icon logout">
+                    {%include "partials/components/icons/out-icon.svg"%} </i
+                >Sair
+            </li>
+        </ul>
+    </div>
+</aside>
