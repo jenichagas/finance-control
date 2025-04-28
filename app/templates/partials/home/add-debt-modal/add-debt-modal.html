@@ -10,9 +10,9 @@
             </div>
             <div>
                 <label for="debt-value">Valor</label>
-                <input class="input-form" type="number" />
+                <input class="input-form" type="" />
             </div>
-            <div x-data="dropdownControl">
+            <div>
                 <label for="debt-category">Categoria</label>
                 {%include
                 "partials/home/add-debt-modal/components/dropdown.html" %}
@@ -31,7 +31,7 @@
         </div>
         <div class="flex justify-between">
             <button type="submit" class="button">Adicionar</button>
-            <button type="button" class="button button-secondary">
+            <button type="button" class="cancel-button">
                 Cancelar
             </button>
         </div>

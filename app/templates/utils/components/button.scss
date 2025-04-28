@@ -19,3 +19,22 @@
         background-color: var(--secondary-color);
     }
 }
+
+.cancel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--text-muted);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 0.625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+
+    &:hover {
+        background-color: var(--text-muted-hover);
+    }
+}
