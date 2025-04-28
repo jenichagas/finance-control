@@ -1,17 +1,17 @@
 <div class="dropdown" x-data="dropdownControl">
-    <button class="input-form" @click="open = !open" @click.away="open = false">
-        Selecione uma Categoria
-    </button>
+    <div
+        class="input-form text-left cursor-pointer"
+        @click="openDropdown =!openDropdown"
+        style="background-color: var(--background-input)"
+    >
+        Selecione uma categoria
+    </div>
 
-    <div class="dropdown-menu" x-show="open" x-transition>
-        {% if CATEGORIES %} {% for category in CATEGORIES %}
+    <div class="dropdown-menu" x-show="openDropdown" x-transition>
+        {% for category in CATEGORIES %}
         <div class="dropdown-item">
             <span>{{ category.name }}</span>
         </div>
-        {% endfor %} {% else %}
-        <div class="dropdown-item no-category">
-            Nenhuma categoria disponível
-        </div>
-        {% endif %}
+        {% endfor %}
     </div>
 </div>

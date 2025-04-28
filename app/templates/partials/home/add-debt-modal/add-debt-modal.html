@@ -1,5 +1,5 @@
 <div class="overlay">
-    <div class="form-container flex flex-column gap-1" @click.window=>
+    <div class="form-container flex flex-column gap-1" >
         <div>
             <h2 class="text-center">Adicionar Gasto</h2>
         </div>
@@ -19,7 +19,7 @@
             </div>
             <div>
                 <label for="debt-start-date">Início</label>
-                <input class="input-form" type="number" />
+                <input class="input-form" type="date" />
             </div>
             <div>
                 <label for="debt-installments">Parcelas</label>
@@ -31,7 +31,7 @@
         </div>
         <div class="flex justify-between">
             <button type="submit" class="button">Adicionar</button>
-            <button type="button" class="cancel-button">
+            <button type="button" class="cancel-button" @click="openModal = false">
                 Cancelar
             </button>
         </div>
