@@ -13,23 +13,27 @@
         <title>Orçana</title>
     </head>
     <body data-theme="default">
-        {% if error %}
-        <div
-            id="globalErrorContainer"
-            class="global-message-container global-error"
-        >
-            <span
-                class="close-btn"
-                onclick="this.parentElement.classList.add('hidden')"
-                >&times;</span
-            >
-            <div>{{ error }}</div>
+        <div>
+            {%include "partials/home/menu/menu-desktop/sidebar.html" %}
+            <!-- {%include "partials/home/menu/menu-mobile/mobile-menu.html" %} -->
         </div>
-        {% endif %}
-        
-        {% block content %}
-        <div id="main">{% include partial with context%}</div>
-        {%endblock%}
+
+        <main id="main-partial">
+            {% if error %}
+            <div
+                id="globalErrorContainer"
+                class="global-message-container global-error"
+            >
+                <span
+                    class="close-btn"
+                    onclick="this.parentElement.classList.add('hidden')"
+                    >&times;</span
+                >
+                <div>{{ error }}</div>
+            </div>
+            {% endif %} {% block content %} {% if partial %} {% include partial
+            with context %} {% endif %} {% endblock %}
+        </main>
 
         <script>
             function switchTheme(theme) {
@@ -41,13 +45,14 @@
                 document.body.setAttribute("data-theme", saved);
             });
 
-            const errorContainer = document.getElementById('globalErrorContainer');
+            const errorContainer = document.getElementById(
+                "globalErrorContainer"
+            );
             if (errorContainer) {
                 setTimeout(() => {
-                    errorContainer.classList.add('hidden');
+                    errorContainer.classList.add("hidden");
                 }, 5000);
             }
         </script>
-
     </body>
 </html>

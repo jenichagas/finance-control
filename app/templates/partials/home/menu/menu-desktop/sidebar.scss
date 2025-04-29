@@ -1,24 +1,28 @@
 .sidebar {
     width: 240px;
-    background-color: #f9fbfc;
+    background-color: var(--sidebar-background-color);
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
-    transition: width 0.3s ease, padding 0.3s ease;
+    transition: width 0.9s ease, padding 0.9s ease;
+    overflow: hidden;
 
     .icon-back-sidebar {
         display: flex;
         justify-content: end;
     }
-    
+
     .user-profile {
         text-align: center;
         img {
             width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin-bottom: 1rem;
+            object-fit: cover;
+            transition: width 0.3s ease, height 0.3s ease;
         }
         h2 {
             font-size: 1rem;
@@ -28,6 +32,9 @@
             color: var(--text-muted);
             font-size: 0.875rem;
         }
+        &.invisible {
+            visibility: hidden;
+        }
     }
 
     .menu,
@@ -35,6 +42,7 @@
         ul {
             list-style: none;
             padding: 0;
+            transition: width 0.9s ease, padding 0.9s ease;
             li {
                 padding: 0.75rem 1rem;
                 border-radius: 10px;
@@ -52,7 +60,7 @@
 
                     i svg {
                         fill: white !important;
-                      }
+                    }
                 }
             }
         }
@@ -60,15 +68,53 @@
 }
 
 .sidebar-collapsed {
-    width: 80px;
+    width: 70px;
     padding: 1rem 0.5rem;
-  
+
     .user-profile {
-      display: none;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h2,
+        a {
+            visibility: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
-  
+
     .menu ul li span,
     .menu-footer ul li span {
-      display: none;
+        visibility: hidden;
     }
+}
+
+.menu-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.menu-text-base {
+    transition: opacity 0.3s ease 0.4s; // atraso para coincidir com a expansão da sidebar
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+  
+  .menu-text-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .menu-text-hidden {
+    opacity: 0;
+    pointer-events: none;
   }

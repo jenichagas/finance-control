@@ -1,6 +1,10 @@
-<div class="flex gap-1">
-    {% include "partials/components/icons/logo-icon.svg" %}
-    <h2>Bem vindo(a), Jeniffer!</h2>
+<div class="flex justify-between">
+    <div class="flex align-center gap-1">
+        {% include "partials/components/icons/logo-icon.svg" %}
+        <h2>Bem vindo(a), Jeniffer!</h2>
+    </div>
+    <div>{%include "partials/components/icons/sun-icon.svg"%}</div>
+
 </div>
 <header class="navbar">
     <div>
@@ -14,10 +18,6 @@
         <div x-show="openModal">
             {%include "partials/home/add-debt-modal/add-debt-modal.html" %}
         </div>
-        <div>
-            <i>
-                {%include "partials/components/icons/notification-icon.svg"%}
-            </i>
-        </div>
+        <div>{%include "partials/components/icons/notification-icon.svg"%}</div>
     </div>
 </header>

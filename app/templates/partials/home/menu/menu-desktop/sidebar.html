@@ -1,7 +1,7 @@
 <aside
     class="sidebar"
     x-data="sidebarControl"
-    :class="{'sidebar-collapse': !isOpen}"
+    :class="{'sidebar-collapsed': !isOpen}"
 >
     <div class="icon-back-sidebar cursor-pointer" @click="isOpen = !isOpen">
         <template x-if="isOpen">
@@ -15,7 +15,7 @@
             </div>
         </template>
     </div>
-    <div class="user-profile" x-show="isOpen" x-transition.opacity>
+    <div class="user-profile">
         <img src="statics/images/user-image.jpeg" alt="User" />
         <h2>Jeniffer Chagas</h2>
         <a href="#" class="cursor-pointer">Meu perfil</a>
@@ -26,28 +26,53 @@
                 <i class="icon dashboard"
                     >{% include "partials/components/icons/data-icon.svg" %}</i
                 >
-                <span x-show="isOpen" x-transition>Dashboard</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-400 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    hx-target="#main-partial" hx-swap="innerHTML"
+                    >Dashboard</span
+                >
             </li>
             <li>
                 <i class="icon wallet"
                     >{% include "partials/components/icons/wallet-icon.svg"
                     %}</i
                 >
-                <span x-show="isOpen" x-transition>Carteira</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-300 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    >Carteira</span
+                >
             </li>
             <li>
                 <i class="icon transactions"
                     >{% include "partials/components/icons/transations-icon.svg"
                     %}</i
                 >
-                <span x-show="isOpen" x-transition>Transações</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-300 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    >Transações</span
+                >
             </li>
             <li>
                 <i class="icon search"
                     >{% include "partials/components/icons/search-icon.svg"
                     %}</i
                 >
-                <span x-show="isOpen" x-transition>Busca</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-300 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    >Busca</span
+                >
             </li>
         </ul>
     </nav>
@@ -59,19 +84,37 @@
                     >{% include "partials/components/icons/settings-icon.svg"
                     %}</i
                 >
-                <span x-show="isOpen" x-transition>Configurações</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-300 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    >Configurações</span
+                >
             </li>
             <li>
                 <i class="icon help"
                     >{% include "partials/components/icons/help-icon.svg" %}</i
                 >
-                <span x-show="isOpen" x-transition>Ajuda</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-300 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    >Ajuda</span
+                >
             </li>
             <li>
                 <i class="icon logout"
                     >{% include "partials/components/icons/out-icon.svg" %}</i
                 >
-                <span x-show="isOpen" x-transition>Sair</span>
+                <span
+                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
+                    x-transition:enter="transition-opacity duration-300 delay-200"
+                    x-transition:leave="transition-opacity duration-200"
+                    x-cloak
+                    >Sair</span
+                >
             </li>
         </ul>
     </div>
