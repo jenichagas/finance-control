@@ -1,8 +1,11 @@
 .navbar {
+    height: 60px;
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
+    padding: 0 1rem;
     align-items: center;
-    margin-bottom: 2rem;
+    z-index: 10;    
 
 
     .search-bar {

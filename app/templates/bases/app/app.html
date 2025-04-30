@@ -1,0 +1,18 @@
+{%extends "bases/main/main.html"%} {% block body %}
+<main id="main logged-in">
+    <div class="main-container">
+        {% if not hide_menu %} {% include
+        "partials/home/menu/menu-desktop/sidebar.html" %} {% endif %}
+
+        <div id="main">
+            <div class="navbar">
+                {% include "partials/home/menu/navbar/navbar.html" %}
+            </div>
+
+            <div id="main-content">
+                {% if partial %} {% include partial with context %} {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

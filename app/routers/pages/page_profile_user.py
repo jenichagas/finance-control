@@ -14,7 +14,7 @@ async def profile_page(request: Request, success: bool = False):
         return RedirectResponse("/login", status_code=302)
     
     return templates.TemplateResponse(
-        "bases/main/main.html",
+        "bases/app/app.html",
         {
             "request": request,
             "partial": "partials/profile-user/profile-user.html",

@@ -13,36 +13,16 @@
         <title>Orçana</title>
     </head>
     <body data-theme="default">
-        <div>
-            {%include "partials/home/menu/menu-desktop/sidebar.html" %}
-            <!-- {%include "partials/home/menu/menu-mobile/mobile-menu.html" %} -->
-        </div>
-
-        <main id="main-partial">
-            {% if error %}
-            <div
-                id="globalErrorContainer"
-                class="global-message-container global-error"
-            >
-                <span
-                    class="close-btn"
-                    onclick="this.parentElement.classList.add('hidden')"
-                    >&times;</span
-                >
-                <div>{{ error }}</div>
-            </div>
-            {% endif %} {% block content %} {% if partial %} {% include partial
-            with context %} {% endif %} {% endblock %}
-        </main>
-
+        {% block body %}{% endblock %}
         <script>
             function switchTheme(theme) {
                 document.body.setAttribute("data-theme", theme);
+                localStorage.setItem("theme", theme);
             }
 
             document.addEventListener("DOMContentLoaded", () => {
-                const saved = localStorage.getItem("theme") || "default";
-                document.body.setAttribute("data-theme", saved);
+                const savedTheme = localStorage.getItem("theme") || "default";
+                document.body.setAttribute("data-theme", savedTheme);
             });
 
             const errorContainer = document.getElementById(

@@ -6,12 +6,12 @@
     <div class="icon-back-sidebar cursor-pointer" @click="isOpen = !isOpen">
         <template x-if="isOpen">
             <div>
-                {%include "partials/components/icons/arrow-right-icon.svg"%}
+                {% include "partials/components/icons/arrow-left-icon.svg" %}
             </div>
         </template>
         <template x-if="!isOpen">
             <div>
-                {% include "partials/components/icons/arrow-left-icon.svg" %}
+                {%include "partials/components/icons/arrow-right-icon.svg"%}
             </div>
         </template>
     </div>
@@ -31,7 +31,8 @@
                     x-transition:enter="transition-opacity duration-400 delay-200"
                     x-transition:leave="transition-opacity duration-200"
                     x-cloak
-                    hx-target="#main-partial" hx-swap="innerHTML"
+                    hx-target="#main-partial"
+                    hx-swap="innerHTML"
                     >Dashboard</span
                 >
             </li>

@@ -1,3 +1,4 @@
+@use "../../bases/app/app.scss";
 @use "../../utils/root-vars";
 @use "../../utils/variables.scss" as *;
 @use "../../utils/reset.scss";
@@ -14,4 +15,7 @@
 @use "../../partials/home/menu/menu-desktop/sidebar.scss";
 @use "../../partials/home/add-debt-modal/add-debt-modal.scss";
 
-
+body {
+    background-size: cover;
+    overflow: hidden;
+}

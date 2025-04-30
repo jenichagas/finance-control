@@ -7,9 +7,9 @@ templates = Jinja2Templates(directory="app/templates")
 
 @router.get("/")
 async def home(request: Request):
-    return templates.TemplateResponse("bases/main/main.html", {
+    return templates.TemplateResponse("bases/app/app.html", {
         "request": request,
-        "partial": "partials/home/home/home.html"
+        "partial": "partials/home/dashboard/dashboard.html"
     })
 
 
