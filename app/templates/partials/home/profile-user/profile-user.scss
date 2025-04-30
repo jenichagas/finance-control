@@ -1,0 +1,76 @@
+.profile-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px var(--box-shadow-color);
+
+    h2 {
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+    }
+
+    .profile-picture {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid var(--secondary-color);
+            // transition: map-get(map-get($theme, default), transition-standard);
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted-hover);
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--background-input);
+            // transition: map-get(map-get($theme, default), transition-standard);
+        }
+
+        input:focus,
+        select:focus {
+            outline: var(--primary-color);
+            background: white;
+        }
+    }
+
+    .btn-save {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.75rem;
+        background: mvar(--gradient);
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        // transition: map-get(map-get($theme, default), transition-standard);
+
+        &:hover {
+            filter: brightness(1.05);
+        }
+    }
+}

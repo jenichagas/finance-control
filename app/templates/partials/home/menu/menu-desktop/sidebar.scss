@@ -9,7 +9,7 @@
     justify-content: space-between;
     box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
     transition: width 0.9s ease, padding 0.9s ease;
-    overflow: auto;
+    overflow: hidden;
 
     .icon-back-sidebar {
         display: flex;

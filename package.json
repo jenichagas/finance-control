@@ -1,6 +1,7 @@
 {
     "dependencies": {
         "alpinejs": "^3.14.9",
+        "apexcharts": "^4.7.0",
         "htmx.org": "^1.9.12"
     },
     "devDependencies": {

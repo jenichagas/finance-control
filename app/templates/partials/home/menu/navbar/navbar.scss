@@ -1,23 +1,24 @@
-.navbar {
-    height: 60px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    align-items: center;
-    z-index: 10;    
+.navbar-container {
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow-color);
 
+    .navbar {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: end;
+        z-index: 10;
 
-    .search-bar {
-        width: 250px;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        outline: none;
-    }
+        .search-bar {
+            width: 250px;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
 
-    .notifications i {
-        margin-left: 1rem;
-        cursor: pointer;
+        .notifications i {
+            margin-left: 1rem;
+            cursor: pointer;
+        }
     }
 }

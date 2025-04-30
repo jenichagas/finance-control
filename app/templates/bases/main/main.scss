@@ -14,6 +14,9 @@
 @use "../../partials/home/menu/navbar/navbar.scss";
 @use "../../partials/home/menu/menu-desktop/sidebar.scss";
 @use "../../partials/home/add-debt-modal/add-debt-modal.scss";
+@use "../../partials/home/profile-user/profile-user.scss";
+@use "../../partials/home/dashboard/components/chart/chart.scss";
+
 
 body {
     background-size: cover;

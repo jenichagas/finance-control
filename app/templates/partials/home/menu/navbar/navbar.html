@@ -1,24 +1,22 @@
-<div class="flex align-center gap-1">
-    {% include "partials/components/icons/logo-icon.svg" %}
-    <h2>Bem vindo(a), Jeniffer!</h2>
-</div>
-<div>
-    <span class="cursor-pointer" @click="toggleTheme()">
-        {%include "partials/components/icons/sun-icon.svg"%}
-    </span>
-</div>
-<header class="navbar">
-    <div>
-        <input type="text" placeholder="pesquisar..." class="search-bar" />
+<div class="navbar-container">
+    <div class="flex align-center gap-1">
+        {% include "partials/components/icons/logo-icon.svg" %}
+        <h2>Bem vindo(a), Jeniffer!</h2>
     </div>
-    <div class="flex gap-1" x-data="debtModalControl">
-        <i @click="openModal =! openModal" class="cursor-pointer">
-            {%include "partials/components/icons/plus-icon.svg"%}</i
-        >
-
-        <div x-show="openModal" @click.away="openModal = false">
-            {%include "partials/home/add-debt-modal/add-debt-modal.html" %}
+    <div></div>
+    <header class="navbar gap-2">
+        <div>
+            <input type="text" placeholder="pesquisar..." class="search-bar" />
         </div>
-        <div>{%include "partials/components/icons/notification-icon.svg"%}</div>
-    </div>
-</header>
+        <div class="flex align-center" x-data="debtModalControl">
+            <div class="flex align-center" " @click="openModal =! openModal" class="cursor-pointer">
+                {%include "partials/components/icons/plus-icon.svg"%}</div
+            >
+            <div x-show="openModal" @click.away="openModal = false">
+                {%include "partials/home/add-debt-modal/add-debt-modal.html" %}
+            </div>
+
+        </div>
+        <div class="flex align-center">{%include "partials/components/icons/notification-icon.svg"%}</div>
+    </header>
+</div>
