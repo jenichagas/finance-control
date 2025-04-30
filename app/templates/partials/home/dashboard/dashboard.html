@@ -53,6 +53,8 @@
             </div>
 
             <div class="card wallet-balance">
+                <h3>Gasto Total</h3>
+
                 <h2>R$4,523.98</h2>
                 <p>
                     <span class="income">R$3,030.98</span>
@@ -61,23 +63,14 @@
             </div>
 
             <div class="card payable-accounts">
-                <h4>Sálário gasto</h4>
-                <p>...</p>
+                <h3>Meta de gasto</h3>
+                <p>30%</p>
                 <div class="progress"><span style="width: 87.5%"></span></div>
                 <p></p>
                 <p><strong>18 DE OUT 2025</strong></p>
             </div>
 
-            <div class="card transactions">
-                <h4>Despesas</h4>
-                <div class="flex align-center">
-                    <i>
-                        {%include
-                        "partials/components/icons/expenses-icon.svg"%}
-                    </i>
-                    <p>Shopping - Nov 25 - R$300</p>
-                </div>
-            </div>
+            
             <!-- <div class="card chart">
                     <h4>Mês</h4>
                     <div class="chart-placeholder">Grafico</div>
@@ -107,5 +100,7 @@
                  -->
         </section>
         {%include "partials/home/dashboard/components/chart/chart.html"%}
+        {%include "partials/home/dashboard/components/expenses-list.html/expenses-list.html"%}
+
     </main>
 </div>
