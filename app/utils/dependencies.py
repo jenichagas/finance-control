@@ -8,14 +8,14 @@ from app.config.settings import SECRET_KEY, ALGORITHM
 async def get_current_user(request: Request):
     token = request.cookies.get("session_token")
 
-    print("TOKEN ENCONTRADO:", token)  # <-- AQUI
+    print("TOKEN ENCONTRADO:", token)  
 
     if not token:
         return None
 
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        print("PAYLOAD:", payload)  # <-- AQUI
+        print("PAYLOAD:", payload)  
         return payload
     except JWTError as e:
         print("ERRO AO DECODIFICAR TOKEN:", e)

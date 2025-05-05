@@ -1,33 +1,16 @@
-<!-- {% if success %}
-  <div 
-    x-data="{ show: true }"
-    x-show="show"
-    x-transition
-    x-init="setTimeout(() => show = false, 4000)"
-    class="alert alert-success"
-  >
-    Dados atualizados com sucesso!
-  </div>
-{% endif %}
 
-<form method="POST" action="/meu-perfil" class="form-box">
-  <label>Nome</label>
-  <input type="text" name="name" value="{{ user.name }}" required>
-
-  <label>Nova senha (opcional)</label>
-  <input type="password" name="password">
-
-  <button type="submit" class="btn">Salvar alterações</button>
-</form> -->
 <section class="profile-page">
   <h2>Meu Perfil</h2>
 
   <form method="post" enctype="multipart/form-data" class="profile-form">
     <div class="profile-picture">
       <label for="avatar">
-        <img src="/statics/images/default-avatar.jpg" alt="Foto de perfil" id="profileImagePreview" />
-        <input type="file" id="avatar" name="avatar" accept="image/*" />
+        <img src="statics/images/user-image.jpeg" alt="Foto de perfil" />
       </label>
+      <div>
+        <input type="file" id="avatar" name="avatar" accept="image/*" />
+        <p>{%include "partials/components/icons/pen-icon.svg"%}</p>
+      </div>
     </div>
 
     <div class="form-group">
@@ -46,6 +29,8 @@
         <option value="">Selecione</option>
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
+        <option value="feminino">Não Binário</option>
+
         <option value="outro">Outro</option>
       </select>
     </div>

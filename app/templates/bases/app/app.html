@@ -6,12 +6,10 @@
 
         <div id="main">
             <div class="navbar">
-                {% include "partials/home/menu/navbar/navbar.html" %}
+                {% include "partials/home/menu/navbar/navbar.html" with context %}
             </div>
 
-            <div id="main-partial">
-                {% if partial %} {% include partial with context %} {% endif %}
-            </div>
+            <div id="main-partial">{% include partial with context %}</div>
         </div>
     </div>
 </main>

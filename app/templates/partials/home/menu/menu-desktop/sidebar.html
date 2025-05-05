@@ -18,7 +18,7 @@
     <div class="user-profile">
         <img src="statics/images/user-image.jpeg" alt="User" />
         <h2>Jeniffer Chagas</h2>
-        <a hx-get="/meu-perfil" hx-target="#main-partial" class="cursor-pointer">Meu perfil</a>
+        <a hx-get="/meu-perfil" hx-target="#main-partial"  hx-swap="innerHTML" class="cursor-pointer">Meu perfil</a>
     </div>
     <nav class="menu">
         <ul>
@@ -31,6 +31,7 @@
                     x-transition:enter="transition-opacity duration-400 delay-200"
                     x-transition:leave="transition-opacity duration-200"
                     x-cloak
+                    hx-get="/dashboard"
                     hx-target="#main-partial"
                     hx-swap="innerHTML"
                     >Dashboard</span
