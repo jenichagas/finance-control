@@ -9,7 +9,7 @@
             <input type="text" placeholder="pesquisar..." class="search-bar" />
         </div>
         <div class="flex align-center" x-data="debtModalControl">
-            <div class="flex align-center" " @click="openModal =! openModal" class="cursor-pointer">
+            <div class="flex align-center" @click="openModal =! openModal" class="cursor-pointer">
                 {%include "partials/components/icons/plus-icon.svg"%}</div
             >
             <div x-show="openModal" @click.away="openModal = false">

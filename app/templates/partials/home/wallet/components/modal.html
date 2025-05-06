@@ -1,0 +1,41 @@
+<div class="wallet-actions">
+    <button @click="openModal = 'salary'" class="btn">+ Salário</button>
+    <button @click="openModal = 'extra'" class="btn">+ Renda Extra</button>
+    <button @click="openModal = 'other'" class="btn">+ Outro</button>
+    <button @click="openModal = 'card'" class="btn">+ Cartão de Crédito</button>
+  </div>
+  
+  <div class="wallet-modal" x-show="openModal" @keydown.escape.window="openModal = ''" x-cloak>
+    <div class="modal-overlay" @click="openModal = ''"></div>
+    <div class="modal-content">
+  
+      <div x-show="openModal === 'salary'">
+        <h2>Adicionar Salário</h2>
+        <input type="number" placeholder="Valor" x-model="newSalary">
+        <button @click="addSalary">Salvar</button>
+      </div>
+  
+      <div x-show="openModal === 'extra'">
+        <h2>Adicionar Renda Extra</h2>
+        <input type="number" placeholder="Valor" x-model="newExtra">
+        <button @click="addExtra">Salvar</button>
+      </div>
+  
+      <div x-show="openModal === 'other'">
+        <h2>Adicionar Outro Valor</h2>
+        <input type="text" placeholder="Descrição" x-model="newOtherDesc">
+        <input type="number" placeholder="Valor" x-model="newOtherValue">
+        <button @click="addOther">Salvar</button>
+      </div>
+  
+      <div x-show="openModal === 'card'">
+        <h2>Novo Cartão de Crédito</h2>
+        <input type="text" placeholder="Nome do Cartão" x-model="newCard.name">
+        <input type="number" placeholder="Limite" x-model="newCard.limit">
+        <input type="number" placeholder="Usado" x-model="newCard.used">
+        <button @click="addCard">Salvar</button>
+      </div>
+  
+    </div>
+  </div>
+  

@@ -36,6 +36,70 @@ const transactionControl = () => ({
             amount: 1200,
             status: "pago",
         },
+
+        {
+            id: 3,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+            status: "pago",
+        },
+        {
+            id: 4,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+            status: "pago",
+        },
+        {
+            id: 5,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+            status: "pago",
+        },
+        {
+            id: 6,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+            status: "pago",
+        },
+        {
+            id: 7,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+            status: "pago",
+        },
+        {
+            id: 8,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+            status: "pago",
+        },
+        {
+            id: 9,
+            date: "2025-04-15",
+            description: "Aluguel",
+            type: "despesa",
+            category: "Casa",
+            amount: 1200,
+                status: "2/4",
+        },
     ],
 
     get filteredTransactions() {
@@ -81,7 +145,7 @@ const transactionControl = () => ({
         this.newTransaction = { ...transaction };
         this.showModal = true;
     },
-    
+
     deleteTransaction(id) {
         this.transactions = this.transactions.filter((t) => t.id !== id);
     },

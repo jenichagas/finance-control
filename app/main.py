@@ -10,6 +10,7 @@ from app.routers.pages import (
     page_reset,
     page_profile_user,
     page_transactions,
+    page_wallet,
 )
 
 # Autenticação (API)
@@ -28,9 +29,14 @@ app.include_router(page_register.router)
 app.include_router(page_reset.router)
 app.include_router(page_profile_user.router)
 app.include_router(page_transactions.router)
+app.include_router(page_wallet.router)
 
 
-# rotas de API (ex: login, reset)
+# rotas de API
 app.include_router(auth_login.router)
 app.include_router(auth_reset.router)
 app.include_router(auth_register.router)
+
+
+
+

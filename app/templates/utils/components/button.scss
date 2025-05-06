@@ -5,7 +5,7 @@
     border: none;
     background-color: var(--primary-color);
     color: var(--light-color);
-    padding: 10px 20px;
+    padding: 0.5rem;
     border-radius: 0.625rem;
     font-weight: 600;
     cursor: pointer;
@@ -13,7 +13,7 @@
     outline: none;
 
     svg {
-        fill: white !important;
+        fill: rgb(255, 255, 255) !important;
     }
     &:hover {
         background-color: var(--secondary-color);

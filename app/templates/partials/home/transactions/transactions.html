@@ -1,15 +1,15 @@
 <section class="transactions-page" x-data="transactionControl">
-
+    {%include "partials/home/transactions/components/filters.html"%}
     <table class="transactions-table">
         <thead>
             <tr>
-                <th>Data</th>
+                <th style="border-top-left-radius: 0.5rem">Data</th>
                 <th>Descrição</th>
-                <th>Tipo</th>
+                <th>Parcelas</th>
                 <th>Categoria</th>
                 <th>Valor</th>
                 <th>Status</th>
-                <th>Ações</th>
+                <th style="border-top-right-radius: 0.5rem">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -22,8 +22,13 @@
                     <td x-text="formatCurrency(item.amount)"></td>
                     <td x-text="item.status"></td>
                     <td>
-                        <button @click="editTransaction(item)">{%include "partials/components/icons/pen-icon.svg"%}</button>
-                        <button @click="deleteTransaction(item.id)">{%include "partials/components/icons/trash-icon.svg"%}</button>
+                        <button @click="editTransaction(item)">
+                            {%include "partials/components/icons/pen-icon.svg"%}
+                        </button>
+                        <button @click="deleteTransaction(item.id)">
+                            {%include
+                            "partials/components/icons/trash-icon.svg"%}
+                        </button>
                     </td>
                 </tr>
             </template>

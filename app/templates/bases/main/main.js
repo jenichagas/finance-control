@@ -3,12 +3,13 @@ import Alpine from "alpinejs";
 import "./htmx.js"
 import ApexCharts from 'apexcharts'
 
-import "../../partials/home/add-debt-modal/components/dropdown.js";
 import "../../partials/home/add-debt-modal/add-debt-modal.js";
 import "../../partials/home/dashboard/dashboard.js";
 import "../../partials/home/menu/menu-desktop/sidebar.js";
 import "../../partials/home/dashboard/components/chart/chart-control.js";
 import "../../partials/home/transactions/transactions.js";
+import "../../partials/home/wallet/wallet.js";
+import "../../util-js/dropdown.js";
 
 window.Alpine = Alpine;
 Alpine.start();

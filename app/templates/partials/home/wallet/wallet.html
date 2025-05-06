@@ -1,0 +1,58 @@
+<section x-data="walletControl()" class="wallet-page">
+    <h1 class="p-1">Carteira Financeira</h1>
+  {%include "partials/home/wallet/components/modal.html"%}
+    <div class="wallet-section income-section">
+      <h2>Entradas</h2>
+      <div class="card-grid">
+        <div class="wallet-card">
+          <h3>Salário</h3>
+          <p>R$ <span x-text="format(salary)"></span></p>
+        </div>
+        <div class="wallet-card">
+          <h3>Renda Extra</h3>
+          <p>R$ <span x-text="format(extraIncome)"></span></p>
+        </div>
+        <div class="wallet-card total">
+          <h3>Total Disponível</h3>
+          <p>R$ <span x-text="format(totalIncome)"></span></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="wallet-section card-section">
+      <h2>Cartões de Crédito</h2>
+      <template x-for="card in creditCards" :key="card.name">
+        <div class="wallet-card">
+          <h3 x-text="card.name"></h3>
+          <p>Limite: R$ <span x-text="format(card.limit)"></span></p>
+          <p>Usado: R$ <span x-text="format(card.used)"></span></p>
+        </div>
+      </template>
+    </div>
+  
+    <!-- Reservas -->
+    <div class="wallet-section reserve-section">
+      <h2>Reservas</h2>
+      <div class="card-grid">
+        <div class="wallet-card">
+          <h3>Emergência</h3>
+          <p>R$ <span x-text="format(reserveEmergency)"></span></p>
+        </div>
+        <div class="wallet-card">
+          <h3>Investimentos</h3>
+          <p>R$ <span x-text="format(reserveInvestments)"></span></p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Projeção -->
+    <div class="wallet-section projection-section">
+      <h2>Resumo</h2>
+      <ul>
+        <li>Comprometido: <span x-text="format(committedAmount)"></span></li>
+        <li>Sobra do mês: <span x-text="format(monthBalance)"></span></li>
+        <li x-show="monthBalance < 0" class="negative">Atenção! Mês negativo</li>
+      </ul>
+    </div>
+  </section>
+  
