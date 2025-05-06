@@ -18,7 +18,13 @@
     <div class="user-profile">
         <img src="statics/images/user-image.jpeg" alt="User" />
         <h2>Jeniffer Chagas</h2>
-        <a hx-get="/meu-perfil" hx-target="#main-partial"  hx-swap="innerHTML" class="cursor-pointer">Meu perfil</a>
+        <a
+            hx-get="/meu-perfil"
+            hx-target="#main-partial"
+            hx-swap="innerHTML"
+            class="cursor-pointer"
+            >Meu perfil</a
+        >
     </div>
     <nav class="menu">
         <ul>
@@ -56,9 +62,13 @@
                     %}</i
                 >
                 <span
+                    class="cursor-pointer"
                     :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
                     x-transition:enter="transition-opacity duration-300 delay-200"
                     x-transition:leave="transition-opacity duration-200"
+                    hx-get="/transacoes"
+                    hx-target="#main-partial"
+                    hx-swap="innerHTML"
                     x-cloak
                     >Transações</span
                 >

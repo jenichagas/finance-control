@@ -1,11 +1,13 @@
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
 from datetime import datetime, timezone
+from .expenses import Expense
 
 
 class User(BaseModel):
     name: str = Field(..., min_length=2, example="Jeniffer Chagas")
     email: EmailStr
+    expenses: list[Expense] | None = []
 
 
 class UserCreate(User):

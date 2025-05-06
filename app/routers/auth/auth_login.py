@@ -16,7 +16,6 @@ async def login(
     password: str = Form(...),
 ):
     user = await db.users.find_one({"email": email})
-
     if not user or not verify_password(password, user["hashed_password"]):
         return templates.TemplateResponse(
             "bases/auth-control/auth-control.html",

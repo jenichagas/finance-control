@@ -8,7 +8,7 @@ import "../../partials/home/add-debt-modal/add-debt-modal.js";
 import "../../partials/home/dashboard/dashboard.js";
 import "../../partials/home/menu/menu-desktop/sidebar.js";
 import "../../partials/home/dashboard/components/chart/chart-control.js";
-
+import "../../partials/home/transactions/transactions.js";
 
 window.Alpine = Alpine;
 Alpine.start();

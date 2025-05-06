@@ -51,7 +51,7 @@ const chartControl = () => ({
         this.chart = new ApexCharts(
             document.getElementById("column-chart"),
             options
-        );
+        );                                                                                  
         this.chart.render();
     },
 

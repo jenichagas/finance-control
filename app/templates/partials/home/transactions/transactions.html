@@ -1,0 +1,32 @@
+<section class="transactions-page" x-data="transactionControl">
+
+    <table class="transactions-table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template x-for="item in filteredTransactions" :key="item.id">
+                <tr>
+                    <td x-text="item.date"></td>
+                    <td x-text="item.description"></td>
+                    <td x-text="item.type"></td>
+                    <td x-text="item.category"></td>
+                    <td x-text="formatCurrency(item.amount)"></td>
+                    <td x-text="item.status"></td>
+                    <td>
+                        <button @click="editTransaction(item)">{%include "partials/components/icons/pen-icon.svg"%}</button>
+                        <button @click="deleteTransaction(item.id)">{%include "partials/components/icons/trash-icon.svg"%}</button>
+                    </td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</section>
