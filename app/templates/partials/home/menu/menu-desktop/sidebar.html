@@ -28,7 +28,13 @@
     </div>
     <nav class="menu">
         <ul>
-            <li class="active">
+            <li
+                class="active"
+                x-cloak
+                hx-get="/dashboard"
+                hx-target="#main-partial"
+                hx-swap="innerHTML"
+            >
                 <i class="icon dashboard"
                     >{% include "partials/components/icons/data-icon.svg" %}</i
                 >
@@ -36,14 +42,16 @@
                     :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
                     x-transition:enter="transition-opacity duration-400 delay-200"
                     x-transition:leave="transition-opacity duration-200"
-                    x-cloak
-                    hx-get="/dashboard"
-                    hx-target="#main-partial"
-                    hx-swap="innerHTML"
                     >Dashboard</span
                 >
             </li>
-            <li>
+            <li
+                hx-get="/carteira"
+                hx-target="#main-partial"
+                hx-swap="innerHTML"
+                class="cursor-pointer"
+                x-cloak
+            >
                 <i class="icon wallet"
                     >{% include "partials/components/icons/wallet-icon.svg"
                     %}</i
@@ -52,15 +60,15 @@
                     :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
                     x-transition:enter="transition-opacity duration-300 delay-200"
                     x-transition:leave="transition-opacity duration-200"
-                    hx-get="/carteira"
-                    hx-target="#main-partial"
-                    hx-swap="innerHTML"
-                    class="cursor-pointer"
-                    x-cloak
                     >Carteira</span
                 >
             </li>
-            <li>
+            <li
+                hx-get="/transacoes"
+                hx-target="#main-partial"
+                hx-swap="innerHTML"
+                x-cloak
+            >
                 <i class="icon transactions"
                     >{% include "partials/components/icons/transations-icon.svg"
                     %}</i
@@ -70,10 +78,6 @@
                     :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
                     x-transition:enter="transition-opacity duration-300 delay-200"
                     x-transition:leave="transition-opacity duration-200"
-                    hx-get="/transacoes"
-                    hx-target="#main-partial"
-                    hx-swap="innerHTML"
-                    x-cloak
                     >Transações</span
                 >
             </li>
