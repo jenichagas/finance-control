@@ -18,6 +18,8 @@
 @use "../../partials/home/dashboard/components/chart/chart.scss";
 @use "../../partials/home/transactions/transactions.scss";
 @use "../../partials/home/ajusts/ajusts.scss";
+@use "../../partials/home/menu/navbar/components/notifications/notification.scss";
+
 body {
     background-size: cover;
     overflow: hidden;

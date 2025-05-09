@@ -4,7 +4,7 @@
             {% include "partials/components/icons/logo-icon.svg" %}
             <h2>Bem vindo(a), Jeniffer!</h2>
         </div>
-        <div class="flex align-center gap-1">
+        <div class="flex align-center gap-1 ">
             <div
                 x-data="{ theme: localStorage.getItem('theme') || 'light' }"
                 class="flex align-center"
@@ -14,7 +14,7 @@
                     theme = theme === 'light' ? 'dark' : 'light';
                     switchTheme(theme);
                   "
-                    class="btn-toggle-theme"
+                    class="btn-toggle-theme cursor-pointer btn"
                 >
                     <template x-if="theme === 'light'" x-transition>
                         {% include "partials/components/icons/moon-icon.svg" %}
@@ -25,8 +25,8 @@
                 </button>
             </div>
 
-            <div class="flex align-center">
-                {% include "partials/components/icons/notification-icon.svg" %}
+            <div class="cursor-pointer">
+                {% include "partials/home/menu/navbar/components/notifications/notification.html" %}
             </div>
         </div>
     </div>
@@ -36,9 +36,11 @@
             <div
                 class="flex align-center"
                 @click="openModal =! openModal"
-                class="cursor-pointer"
+                class="cursor-pointer "
             >
-                {%include "partials/components/icons/plus-icon.svg"%}
+              <button class="button">
+                {%include "partials/components/icons/plus-icon.svg"%} novo debito
+              </button> 
             </div>
             <div x-show="openModal" @click.away="openModal = false">
                 {%include "partials/home/add-debt-modal/add-debt-modal.html" %}

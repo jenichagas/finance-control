@@ -1,0 +1,31 @@
+<div x-data="notificationDropdown()" class="relative">
+    <button @click="toggle()" class="notification-btn">
+        <div class="relative">
+            {% include "partials/components/icons/notification-icon.svg" %}
+            <span
+                x-show="notifications.length > 0"
+                x-text="notifications.length"
+                class="badge"
+            ></span>
+        </div>
+    </button>
+
+    <div
+        x-show="open"
+        @click.away="open = false"
+        class="notification-dropdown"
+        x-transition
+    >
+        <h4>Notificações</h4>
+        <ul>
+            <template x-for="(notif, index) in notifications" :key="index">
+                <li x-text="notif.message">
+
+                </li>
+            </template>
+        </ul>
+        <div x-show="notifications.length === 0" class="no-notifications">
+            Sem notificações.
+        </div>
+    </div>
+</div>
