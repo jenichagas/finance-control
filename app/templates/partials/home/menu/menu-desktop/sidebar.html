@@ -99,7 +99,13 @@
 
     <div class="menu-footer">
         <ul>
-            <li>
+            <li
+                hx-get="/configuracoes"
+                hx-target="#main-partial"
+                hx-swap="innerHTML"
+                class="cursor-pointer"
+                x-cloak
+            >
                 <i class="icon setting"
                     >{% include "partials/components/icons/settings-icon.svg"
                     %}</i

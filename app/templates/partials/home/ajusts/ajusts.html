@@ -1,0 +1,50 @@
+<section class="config-page" x-data="configForm()">
+    <h1 class="config-title">Configurações</h1>
+  
+    <div class="config-section">
+      <h2>Conta</h2>
+      <form @submit.prevent="saveAccount">
+        <input type="text" placeholder="Nome" x-model="user.name">
+        <input type="email" placeholder="Email" x-model="user.email">
+        <select x-model="user.gender">
+          <option value="">Selecione o gênero</option>
+          <option value="F">Feminino</option>
+          <option value="M">Masculino</option>
+          <option value="O">Outro</option>
+        </select>
+        <input type="password" placeholder="Nova senha" x-model="user.password">
+        <button type="submit">Salvar Conta</button>
+      </form>
+    </div>
+  
+    <div class="config-section">
+      <h2>Preferências</h2>
+      <form @submit.prevent="savePreferences">
+        <label>
+          Tema:
+          <select x-model="preferences.theme">
+            <option value="light">Claro</option>
+            <option value="dark">Escuro</option>
+          </select>
+        </label>
+  
+        <label>
+          Cor primária:
+          <input type="color" x-model="preferences.primaryColor">
+        </label>
+  
+        <button type="submit">Salvar Preferências</button>
+      </form>
+    </div>
+  
+    <div class="config-section">
+      <h2>Financeiro</h2>
+      <form @submit.prevent="saveFinance">
+        <input type="number" placeholder="Salário padrão" x-model="finance.salary">
+        <input type="number" placeholder="% Emergência" x-model="finance.reserveEmergency">
+        <input type="number" placeholder="% Investimentos" x-model="finance.reserveInvestments">
+        <button type="submit">Salvar Financeiro</button>
+      </form>
+    </div>
+  </section>
+  

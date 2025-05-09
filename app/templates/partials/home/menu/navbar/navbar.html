@@ -3,11 +3,9 @@
         {% include "partials/components/icons/logo-icon.svg" %}
         <h2>Bem vindo(a), Jeniffer!</h2>
     </div>
-    <div></div>
+
     <header class="navbar gap-2">
-        <div>
-            <input type="text" placeholder="pesquisar..." class="search-bar" />
-        </div>
+
         <div class="flex align-center" x-data="debtModalControl">
             <div class="flex align-center" @click="openModal =! openModal" class="cursor-pointer">
                 {%include "partials/components/icons/plus-icon.svg"%}</div

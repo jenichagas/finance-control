@@ -46,7 +46,7 @@
                     {%include "partials/components/icons/plus-icon.svg"%}
                     <h3>Emergência</h3>
                 </div>
-                <p>R$ <span x-text="format(reserveEmergency)"></span></p>
+                <p style="padding-left: 0.5em;">R$ <span x-text="format(reserveEmergency)"></span></p>
             </div>
             <div class="wallet-card">
                 <div class="flex align-center gap-1">
@@ -54,7 +54,7 @@
                     "partials/components/icons/chart-investment-icon.svg"%}
                     <h3>Investimentos</h3>
                 </div>
-                <p>R$ <span x-text="format(reserveInvestments)"></span></p>
+                <p style="padding-left: 0.5em;">R$ <span x-text="format(reserveInvestments)"></span></p>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
         <h2 class="flex align-center gap-1">
             {%include "partials/components/icons/list-icon.svg"%} Resumo
         </h2>
-        <ul>
+        <ul class="wallet-card">
             <li>
                 Comprometido: <span x-text="format(committedAmount)"></span>
             </li>
