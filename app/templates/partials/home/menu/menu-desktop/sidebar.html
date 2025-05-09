@@ -1,9 +1,9 @@
 <aside
-    class="sidebar"
+    class="sidebar no-transition"
     x-data="sidebarControl"
     :class="{'sidebar-collapsed': !isOpen}"
 >
-    <div class="icon-back-sidebar cursor-pointer" @click="isOpen = !isOpen">
+    <div class="icon-back-sidebar cursor-pointer" @click="toggleSidebar">
         <template x-if="isOpen">
             <div>
                 {% include "partials/components/icons/arrow-left-icon.svg" %}
@@ -79,19 +79,6 @@
                     x-transition:enter="transition-opacity duration-300 delay-200"
                     x-transition:leave="transition-opacity duration-200"
                     >Transações</span
-                >
-            </li>
-            <li>
-                <i class="icon search"
-                    >{% include "partials/components/icons/search-icon.svg"
-                    %}</i
-                >
-                <span
-                    :class="isOpen ? 'menu-text-visible' : 'menu-text-hidden'"
-                    x-transition:enter="transition-opacity duration-300 delay-200"
-                    x-transition:leave="transition-opacity duration-200"
-                    x-cloak
-                    >Busca</span
                 >
             </li>
         </ul>

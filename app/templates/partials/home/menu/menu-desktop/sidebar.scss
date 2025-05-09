@@ -11,6 +11,10 @@
     transition: width 0.9s ease, padding 0.9s ease;
     overflow: hidden;
 
+    &.no-transition {
+        transition: none !important;
+    }
+
     .icon-back-sidebar {
         display: flex;
         justify-content: end;
@@ -104,19 +108,19 @@
 }
 
 .menu-text-base {
-    transition: opacity 0.3s ease 0.4s; // atraso para coincidir com a expansão da sidebar
+    transition: opacity 0.3s ease 0.4s;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
-  }
-  
-  .menu-text-visible {
+}
+
+.menu-text-visible {
     opacity: 1;
     pointer-events: auto;
-  }
-  
-  .menu-text-hidden {
+}
+
+.menu-text-hidden {
     opacity: 0;
     pointer-events: none;
-  }
+}

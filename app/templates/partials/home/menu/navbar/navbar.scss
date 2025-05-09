@@ -22,3 +22,31 @@
         }
     }
 }
+
+.btn-toggle-theme {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: var(--card);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  
+    svg {
+      width: 24px;
+      height: 24px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  
+    &:hover {
+      background: var(--primary);
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  

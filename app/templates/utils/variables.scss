@@ -1,7 +1,6 @@
 $theme: (
   default: ( 
     primary-color: #00a8cc,
-
     secondary-color: #0088a9,
     secondary-btn: #0c95b795,
     orange-color: #db5e5e,
@@ -18,17 +17,17 @@ $theme: (
     border-color: #71809619,
   ),
 
-  // dark: ( 
-  //   primary-color: #00c2cb,
-  //   secondary-color: #005f73,
-  //   accent-color: #7fffd4,
-  //   dark-color: #000000,
-  //   light-color: #e7e5e5,
-  //   background-color: #121212,
-  //   box-shadow-color: rgba(255, 255, 255, 0.05),
-  //   text-muted: #a0aec0,
-  //   gradient: linear-gradient(135deg, #00c2cb, #7fffd4),
-  //   transition-standard: all 0.3s ease
-  // )
+  dark: ( 
+    primary-color: #00c2cb,
+    secondary-color: #005f73,
+    accent-color: #7fffd4,
+    dark-color: #000000,
+    light-color: #e7e5e5,
+    background-color: #121212,
+    box-shadow-color: rgba(255, 255, 255, 0.05),
+    text-muted: #a0aec0,
+    gradient: linear-gradient(135deg, #00c2cb, #7fffd4),
+    transition-standard: all 0.3s ease
+  )
 );
 

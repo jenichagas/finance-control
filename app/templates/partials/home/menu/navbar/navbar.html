@@ -1,20 +1,48 @@
 <div class="navbar-container">
-    <div class="flex align-center gap-1">
-        {% include "partials/components/icons/logo-icon.svg" %}
-        <h2>Bem vindo(a), Jeniffer!</h2>
+    <div class="flex justify-between">
+        <div class="flex align-center gap-1">
+            {% include "partials/components/icons/logo-icon.svg" %}
+            <h2>Bem vindo(a), Jeniffer!</h2>
+        </div>
+        <div class="flex align-center gap-1">
+            <div
+                x-data="{ theme: localStorage.getItem('theme') || 'light' }"
+                class="flex align-center"
+            >
+                <button
+                    @click="
+                    theme = theme === 'light' ? 'dark' : 'light';
+                    switchTheme(theme);
+                  "
+                    class="btn-toggle-theme"
+                >
+                    <template x-if="theme === 'light'" x-transition>
+                        {% include "partials/components/icons/moon-icon.svg" %}
+                    </template>
+                    <template x-if="theme === 'dark'" x-transition>
+                        {% include "partials/components/icons/sun-icon.svg" %}
+                    </template>
+                </button>
+            </div>
+
+            <div class="flex align-center">
+                {% include "partials/components/icons/notification-icon.svg" %}
+            </div>
+        </div>
     </div>
 
     <header class="navbar gap-2">
-
         <div class="flex align-center" x-data="debtModalControl">
-            <div class="flex align-center" @click="openModal =! openModal" class="cursor-pointer">
-                {%include "partials/components/icons/plus-icon.svg"%}</div
+            <div
+                class="flex align-center"
+                @click="openModal =! openModal"
+                class="cursor-pointer"
             >
+                {%include "partials/components/icons/plus-icon.svg"%}
+            </div>
             <div x-show="openModal" @click.away="openModal = false">
                 {%include "partials/home/add-debt-modal/add-debt-modal.html" %}
             </div>
-
         </div>
-        <div class="flex align-center">{%include "partials/components/icons/notification-icon.svg"%}</div>
     </header>
 </div>
