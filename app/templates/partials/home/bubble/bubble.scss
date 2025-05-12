@@ -1,0 +1,136 @@
+.ai-bubble {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 999;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    .bubble-avatar {
+        border: none;
+        background: none;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .ai-speech-bubble {
+        background: var(--light-color);
+        color: var(--text);
+        padding: 0.75rem 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        font-size: 0.9rem;
+        max-width: 180px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -8px;
+            bottom: 12px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid var(--light-color);
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+    }
+
+    .chat-container {
+        width: 320px;
+        background: var(--light-color);
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        position: absolute;
+        bottom: -1rem;
+        right: 0;
+
+        &.chat-open {
+            transform: translateY(0);
+        }
+
+        &.chat-minimized {
+            transform: translateY(calc(100% - 52px));
+        }
+
+        .chat-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            position: relative;
+
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .chat-close {
+                position: absolute;
+                right: 0.75rem;
+                top: 0.75rem;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .chat-body {
+            padding: 1rem;
+
+            .ia-message {
+                background: #eee;
+                padding: 0.75rem;
+                border-radius: 0.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .chat-form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                input[type="file"] {
+                    background: var(--light-color);
+                    padding: 0.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 0.5rem;
+                }
+
+                button {
+                    background: var(--primary);
+                    color: var(--light-color);
+                    padding: 0.5rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                }
+            }
+
+            .chat-result {
+                margin-top: 1rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

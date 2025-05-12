@@ -19,6 +19,11 @@
 @use "../../partials/home/transactions/transactions.scss";
 @use "../../partials/home/ajusts/ajusts.scss";
 @use "../../partials/home/menu/navbar/components/notifications/notification.scss";
+@use "../../partials/home/bubble/bubble.scss";
+@use "../../partials/home/bubble/ia-chat/ia-chat.scss";
+
+
+
 
 body {
     background-size: cover;

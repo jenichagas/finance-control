@@ -11,7 +11,9 @@ import "../../partials/home/dashboard/components/chart/chart-control.js";
 import "../../partials/home/transactions/transactions.js";
 import "../../partials/home/wallet/wallet.js";
 import "../../partials/home/ajusts/ajusts.js";
-import "../../partials/home/menu/navbar/components/notifications/notification.js"
+import "../../partials/home/menu/navbar/components/notifications/notification.js";
+import "../../partials/home/bubble/ia-chat/ia-chat.js";
+import "../../partials/home/bubble/bubble-control.js";
 
 window.Alpine = Alpine;
 Alpine.start();
