@@ -1,52 +1,57 @@
 <div x-data="bubbleControl()" class="ai-bubble">
+    <div
+        class="ai-speech-bubble"
+        x-show="showSpeech"
+        x-transition
+        @click="showSpeech = false"
+    >
+        Olá! Adicione seu extrato.
+    </div>
+
+    <button
+        class="bubble-avatar"
+        @click="open = true; minimized = false"
+        x-show="!open"
+        x-transition
+    >
+        <img src="statics/images/ia-image.png" alt="IA" />
+    </button>
 
     <div
-      class="ai-speech-bubble"
-      x-show="showSpeech"
-      x-transition
-      @click="showSpeech = false"
-    >
-      Olá! Adicione seu extrato.
-    </div>
-  
-    <button
-      class="bubble-avatar"
-      @click="open = true; minimized = false"
-      x-show="!open"
-      x-transition
-    >
-      <img src="statics/images/ia-image.png" alt="IA" />
-    </button>
-  
-    <div
-      class="chat-container"
-      x-show="open"
-      x-transition
-      :class="{
+        class="chat-container"
+        x-show="open"
+        x-transition
+        :class="{
         'chat-open': open && !minimized,
         'chat-minimized': open && minimized
       }"
     >
-      <div class="chat-header" @click="minimized = !minimized">
-        <img src="statics/images/ia-image.png" alt="IA" />
-        <strong>Orçana IA</strong>
-        <span class="chat-close" @click.stop="open = false">×</span>
-      </div>
-  
-      <div class="chat-body" x-show="!minimized" x-transition>
-        <p class="ia-message">Olá! Envie seu extrato em PDF.</p>
-        <form
-          hx-post="/api/pdf-to-ai"
-          hx-encoding="multipart/form-data"
-          hx-target="#ai-result"
-          hx-swap="innerHTML"
-          class="chat-form"
-        >
-          <input type="file" name="pdf" accept="application/pdf" required />
-          <button type="submit">Analisar</button>
-        </form>
-        <div id="ai-result" class="chat-result"></div>
-      </div>
+        <div class="chat-header" @click="minimized = !minimized">
+            <img src="statics/images/ia-image.png" alt="IA" />
+            <strong>Orçana IA</strong>
+            <span class="chat-close" @click.stop="open = false">×</span>
+        </div>
+
+        <div class="chat-body" x-show="!minimized" x-transition>
+            <div>
+                <p class="ia-message">Olá! Envie seu extrato em PDF.</p>
+            </div>
+            <form
+                hx-post="/api/pdf-to-ai"
+                hx-encoding="multipart/form-data"
+                hx-target="#ai-result"
+                hx-swap="innerHTML"
+                class="chat-form"
+            >
+                <input
+                    type="file"
+                    name="pdf"
+                    accept="application/pdf"
+                    required
+                />
+                <button type="submit">Analisar</button>
+            </form>
+            <div id="ai-result" class="chat-result">AAAA</div>
+        </div>
     </div>
-  </div>
-  
+</div>
