@@ -2,6 +2,7 @@
     class="sidebar no-transition"
     x-data="sidebarControl"
     :class="{'sidebar-collapsed': !isOpen}"
+    x-cloak
 >
     <div class="icon-back-sidebar cursor-pointer" @click="toggleSidebar">
         <template x-if="isOpen">
