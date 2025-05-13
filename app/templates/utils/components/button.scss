@@ -3,10 +3,10 @@
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: var(--primary-color);
+    background: var(--gradient);
     color: var(--light-color);
     padding: 0.5rem;
-    border-radius: 0.625rem;
+    border-radius: 0.4rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -37,4 +37,18 @@
     &:hover {
         background-color: var(--text-muted-hover);
     }
+}
+
+.btn-filter {
+    display: flex;
+    align-items: center;
+    border: 0.1rem ridge #ccc;
+    justify-content: center;
+    background: var(--light-color);
+    padding:  0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+
 }

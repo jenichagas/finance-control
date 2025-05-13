@@ -3,19 +3,9 @@
     box-shadow: var(--box-shadow-color);
 
     .navbar {
-        flex-shrink: 0;
         display: flex;
         justify-content: end;
-        z-index: 10;
-
-        .search-bar {
-            width: 250px;
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            outline: none;
-        }
-
+        
         .notifications i {
             margin-left: 1rem;
             cursor: pointer;
@@ -25,17 +15,16 @@
 
 .btn-toggle-theme {
     transition: background 0.3s ease, transform 0.2s ease;
-  
+
     svg {
-      transition: opacity 0.3s ease, transform 0.3s ease;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
-  
+
     &:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
-  
+
     &:active {
-      transform: scale(0.95);
+        transform: scale(0.95);
     }
-  }
-  
+}

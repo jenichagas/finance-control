@@ -2,17 +2,17 @@
     <main class="main-content flex flex-column gap-4">
         <div class="flex flex-column items-end">
             <div>
-                <button class="button" @click="isOpen = !isOpen">
+                <button class="btn-filter" @click="isOpen = !isOpen">
                     Fevereiro
                     <template x-if="isOpen">
-                        <div>
+                        <div class="flex">
                             {% include
                             "partials/components/icons/arrow-up-filter-icon.svg"
                             %}
                         </div>
                     </template>
                     <template x-if="!isOpen">
-                        <div>
+                        <div class="flex">
                             {% include
                             "partials/components/icons/arrow-down-filter-icon.svg"
                             %}

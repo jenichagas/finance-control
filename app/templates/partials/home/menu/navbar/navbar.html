@@ -1,5 +1,5 @@
 <div class="navbar-container">
-    <div class="flex justify-between">
+    <div class="flex justify-between p-b-2">
         <div class="flex align-center gap-1">
             {% include "partials/components/icons/logo-icon.svg" %}
             <h2>Bem vindo(a), Jeniffer!</h2>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <!-- <header class="navbar gap-2">
+    <header class="navbar gap-2 p-t-2">
         <div class="flex align-center" x-data="debtModalControl">
             <div
                 class="flex align-center"
@@ -39,12 +39,12 @@
                 class="cursor-pointer "
             >
               <button class="button">
-                {%include "partials/components/icons/plus-icon.svg"%} novo debito
+                {%include "partials/components/icons/plus-icon.svg"%} Adicionar debito
               </button> 
             </div>
             <div x-show="openModal" @click.away="openModal = false">
                 {%include "partials/home/add-debt-modal/add-debt-modal.html" %}
             </div>
         </div>
-    </header> -->
+    </header>
 </div>

@@ -37,12 +37,10 @@
 
             p {
                 font-size: 1rem;
-                font-weight: bold;
             }
 
             &.total {
-                background: #c2f1d3;
-                border-left: 4px solid var(--secondary-btn);
+                background: var(--green-color);
             }
         }
 
@@ -58,6 +56,9 @@
     gap: 1rem;
 
     .btn {
+        display: flex;
+        align-items: center;
+        gap: 0.1rem;
         background: #2ed8b6;
         padding: 0.5rem;
         color: rgb(255, 255, 255);
