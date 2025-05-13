@@ -95,8 +95,24 @@
                 </div>
                  -->
         </section>
-        {%include "partials/home/dashboard/components/chart/chart.html"%}
-        {%include
-        "partials/home/dashboard/components/expenses-list.html/expenses-list.html"%}
+        <div class="flex">
+            <div class="card w-50 ">
+                <div><p class="bold">Gastos por Categoria</p></div>
+                <div class="flex align-center justify-center">
+                    {%include
+                    "partials/home/dashboard/components/chart/chart.html"%}
+                </div>
+            </div>
+
+            <div class="card w-50">
+                <div><p class="bold">Comparação Mensal</p></div>
+                {%include
+                "partials/home/dashboard/components/chart-monthly-evolution/chart.html"%}
+            </div>
+        </div>
+        <div>
+            {%include
+            "partials/home/dashboard/components/expenses-list.html/expenses-list.html"%}
+        </div>
     </main>
 </div>

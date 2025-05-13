@@ -21,7 +21,7 @@ const chartControl = () => ({
                 enabled: false,
             },
             fill: {
-                type: "gradient",
+                type: "donut",
             },
             legend: {
                 formatter: function (val, opts) {
