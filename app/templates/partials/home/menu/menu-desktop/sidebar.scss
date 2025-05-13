@@ -32,14 +32,24 @@
         }
         h2 {
             font-size: 1rem;
-            margin: 0.5rem 0 0.2rem;
         }
+        
         p {
             color: var(--text-muted);
             font-size: 0.875rem;
         }
+
         &.invisible {
             visibility: hidden;
+        }
+
+        .account-plan {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--yellow-color);
+            border-radius: 5rem;
+            width: 8rem;
         }
     }
 

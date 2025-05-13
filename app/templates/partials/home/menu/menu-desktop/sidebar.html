@@ -18,14 +18,23 @@
     </div>
     <div class="user-profile">
         <img src="statics/images/user-image.jpeg" alt="User" />
-        <h2>Jeniffer Chagas</h2>
-        <a
-            hx-get="/meu-perfil"
-            hx-target="#main-partial"
-            hx-swap="innerHTML"
-            class="cursor-pointer"
-            >Meu perfil</a
-        >
+        <div class="flex flex-column gap-1">
+            <h2>Jeniffer Chagas</h2>
+            <a
+                hx-get="/meu-perfil"
+                hx-target="#main-partial"
+                hx-swap="innerHTML"
+                class="cursor-pointer"
+                >Meu perfil</a
+            >
+            <div class="flex align-center justify-center">
+                <p class="account-plan">
+                    {%include "partials/components/icons/heart-circle-icon.svg"%}
+                    conta gratis
+                </p>
+            </div>
+        </div>
+     
     </div>
     <nav class="menu">
         <ul>
