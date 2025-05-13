@@ -46,11 +46,7 @@
                         </template>
                     </div>
                 </div>
-                <h2>R$ 5,678</h2>
-
-                <div class="icon-wallet">
-                    {%include "partials/components/icons/coin-icon.svg"%}
-                </div>
+                <h2 x-text="showSalary ? 'R$ 5.678,00' : '••••••'"></h2>
             </div>
 
             <div class="card wallet-balance">

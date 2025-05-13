@@ -22,12 +22,16 @@
             }
 
             &.card-blue {
-                background: linear-gradient(135deg, #00a7cc9f, #0087a9a6);
+                background: var(--gradient);
                 color: #ffffff;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
+
+                svg {
+                    fill: var(--gradient);
+                }
 
                 h2 {
                     font-size: 2rem;
