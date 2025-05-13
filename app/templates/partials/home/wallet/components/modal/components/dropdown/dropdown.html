@@ -1,0 +1,18 @@
+<div class="dropdown" x-data="dropdownControl">
+    <div
+        class="input-form text-left cursor-pointer"
+        @click="openDropdown =!openDropdown"
+        style="background-color: var(--background-input)"
+    >
+        <p>Selecione uma categoria</p>
+    </div>
+
+    <div class="dropdown-menu" x-show="openDropdown" x-transition>
+        <div class="dropdown-item">
+            <p>Salário</p>
+        </div>
+        <div class="dropdown-item">
+            <p>Extra</p>
+        </div>
+    </div>
+</div>

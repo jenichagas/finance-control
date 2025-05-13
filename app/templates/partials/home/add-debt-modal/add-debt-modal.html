@@ -2,6 +2,7 @@
     <div
         class="form-container flex flex-column gap-1"
         @keydown.escape.window="openModal = ''"
+        @click.away="openModal = false"
         x-cloak
     >
         <div>
@@ -31,7 +32,7 @@
             </div>
         </form>
         <div class="padding-1 text-center">
-            <p class="text-muted">Todos os campos são obrigatórios.</p>
+            <p class="red-color">Todos os campos são obrigatórios.</p>
         </div>
         <div class="flex justify-between">
             <button type="submit" class="button">Adicionar</button>

@@ -7,10 +7,8 @@
     color: var(--light-color);
     padding: 0.5rem;
     border-radius: 0.4rem;
-    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    outline: none;
 
     svg {
         fill: rgb(255, 255, 255) !important;
@@ -24,15 +22,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
     background-color: var(--text-muted);
     color: var(--light-color);
-    padding: 10px 20px;
-    border-radius: 0.625rem;
-    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    outline: none;
 
     &:hover {
         background-color: var(--text-muted-hover);
@@ -45,10 +40,8 @@
     border: 0.1rem ridge #ccc;
     justify-content: center;
     background: var(--light-color);
-    padding:  0.3rem;
+    padding: 0.3rem;
     border-radius: 0.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    outline: none;
-
 }
