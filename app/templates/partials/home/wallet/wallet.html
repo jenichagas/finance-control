@@ -28,7 +28,7 @@
             de Crédito
         </h2>
         <template x-for="card in creditCards" :key="card.name">
-            <div class="wallet-card">
+            <div class="wallet-card w-33">
                 <h3 x-text="card.name"></h3>
                 <p>Limite: R$ <span x-text="format(card.limit)"></span></p>
                 <p>Usado: R$ <span x-text="format(card.used)"></span></p>
