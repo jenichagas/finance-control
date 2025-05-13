@@ -1,5 +1,9 @@
 <div class="overlay">
-    <div class="form-container flex flex-column gap-1">
+    <div
+        class="form-container flex flex-column gap-1"
+        @keydown.escape.window="openModal = ''"
+        x-cloak
+    >
         <div>
             <h2 class="text-center">Adicionar Gasto</h2>
         </div>

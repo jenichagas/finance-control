@@ -1,160 +1,107 @@
 <div class="card">
-    <h2 class="p-2">Despesas</h2>
-    <div
-        class="card flex justify-between"
-        style="
-            background-color: var(--primary-color);
-            color: var(--light-color);
-        "
-    >
-        <div>Categoria</div>
-        <div>Nome</div>
-        <div>Data</div>
-        <div>Valor</div>
-    </div>
-    <div class="overflow-y-auto" style="max-height: 30rem">
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
+    <h2 class="flex gap-1 p-2">
+        <span class="flex align-center" style="color: rgba(240, 101, 67, 0.85)">
+            {%include "partials/components/icons/money-icon.svg"%}
+        </span>
+        Despesas
+    </h2>
+
+    <div class="expense-table">
+        <div class="expense-header">
+            <div>Categoria</div>
+            <div>Nome</div>
+            <div>Data</div>
+            <div>Valor</div>
+        </div>
+
+        <div class="expense-body overflow-y-auto" style="max-height: 30rem">
+            <div class="expense-row">
+                <div>Alimentação</div>
+                <div>Shopping</div>
+                <div>25/05/2024</div>
+                <div class="expense-value">
+                    <span class="icon">
+                        {% include
+                        "partials/components/icons/arrow-expense-out-icon.svg"
+                        %}
+                    </span>
+                    R$ 65,90
                 </div>
-                65,90
             </div>
         </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
+        <div class="expense-body overflow-y-auto" style="max-height: 30rem">
+            <div class="expense-row">
+                <div>Saúde</div>
+                <div>Oftalmo</div>
+                <div>28/05/2024</div>
+                <div class="expense-value">
+                    <span class="icon">
+                        {% include
+                        "partials/components/icons/arrow-expense-out-icon.svg"
+                        %}
+                    </span>
+                    R$ 100,90
                 </div>
-                65,90
             </div>
         </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
+        <div class="expense-body overflow-y-auto" style="max-height: 30rem">
+            <div class="expense-row">
+                <div>Pet</div>
+                <div>Veterinario</div>
+                <div>21/05/2024</div>
+                <div class="expense-value">
+                    <span class="icon">
+                        {% include
+                        "partials/components/icons/arrow-expense-out-icon.svg"
+                        %}
+                    </span>
+                    R$ 458,90
                 </div>
-                65,90
             </div>
         </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
+        <div class="expense-body overflow-y-auto" style="max-height: 30rem">
+            <div class="expense-row">
+                <div>Mercado</div>
+                <div>Compra</div>
+                <div>18/05/2024</div>
+                <div class="expense-value">
+                    <span class="icon">
+                        {% include
+                        "partials/components/icons/arrow-expense-out-icon.svg"
+                        %}
+                    </span>
+                    R$ 1970,90
                 </div>
-                65,90
             </div>
         </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
+        <div class="expense-body overflow-y-auto" style="max-height: 30rem">
+            <div class="expense-row">
+                <div>Mecanico</div>
+                <div>óleo</div>
+                <div>15/05/2024</div>
+                <div class="expense-value">
+                    <span class="icon">
+                        {% include
+                        "partials/components/icons/arrow-expense-out-icon.svg"
+                        %}
+                    </span>
+                    R$ 89,90
                 </div>
-                65,90
             </div>
         </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
+        <div class="expense-body overflow-y-auto" style="max-height: 30rem">
+            <div class="expense-row">
+                <div>Casa</div>
+                <div>Luz</div>
+                <div>05/05/2024</div>
+                <div class="expense-value">
+                    <span class="icon">
+                        {% include
+                        "partials/components/icons/arrow-expense-out-icon.svg"
+                        %}
+                    </span>
+                    R$ 266,90
                 </div>
-                65,90
-            </div>
-        </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
-                </div>
-                65,90
-            </div>
-        </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
-                </div>
-                65,90
-            </div>
-        </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
-                </div>
-                65,90
-            </div>
-        </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
-                </div>
-                65,90
-            </div>
-        </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
-                </div>
-                65,90
-            </div>
-        </div>
-        <div class="card flex justify-between">
-            <div>Alimentação</div>
-            <div>Shopping</div>
-            <div>25/05/2024</div>
-            <div class="flex">
-                <div class="flex align-center p-1">
-                    {%include
-                    "partials/components/icons/arrow-expense-out-icon.svg"%}
-                </div>
-                65,90
             </div>
         </div>
     </div>

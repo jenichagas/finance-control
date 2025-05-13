@@ -38,7 +38,10 @@
 
     <div class="wallet-section">
         <h2 class="flex align-center gap-1">
-            {%include "partials/components/icons/money-bag-icon.svg"%} Reservas
+            <span style="color:  rgba(240, 101, 67, 0.85)">
+                {%include "partials/components/icons/pig-money-icon.svg"%}
+            </span>
+            Reservas
         </h2>
         <div class="card-grid">
             <div class="wallet-card">
@@ -46,7 +49,9 @@
                     {%include "partials/components/icons/plus-icon.svg"%}
                     <h3>Emergência</h3>
                 </div>
-                <p style="padding-left: 0.5em;">R$ <span x-text="format(reserveEmergency)"></span></p>
+                <p style="padding-left: 0.5em">
+                    R$ <span x-text="format(reserveEmergency)"></span>
+                </p>
             </div>
             <div class="wallet-card">
                 <div class="flex align-center gap-1">
@@ -54,7 +59,9 @@
                     "partials/components/icons/chart-investment-icon.svg"%}
                     <h3>Investimentos</h3>
                 </div>
-                <p style="padding-left: 0.5em;">R$ <span x-text="format(reserveInvestments)"></span></p>
+                <p style="padding-left: 0.5em">
+                    R$ <span x-text="format(reserveInvestments)"></span>
+                </p>
             </div>
         </div>
     </div>

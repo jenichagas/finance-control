@@ -5,43 +5,52 @@
 
 </div>
 
-<div
-    class="wallet-modal"
-    x-show="openModal"
-    @keydown.escape.window="openModal = ''"
-    x-cloak
->
-    <div class="modal-overlay" @click="openModal = ''"></div>
-    <div class="modal-content">
-        <div x-show="openModal === 'salary'">
-            <h2>Adicionar Salário</h2>
-            <input type="number" placeholder="Valor" x-model="newSalary" />
-            <button @click="addSalary">Salvar</button>
-        </div>
 
-        <div x-show="openModal === 'extra'">
-            <h2>Adicionar Renda Extra</h2>
-            <input type="number" placeholder="Valor" x-model="newExtra" />
-            <button @click="addExtra">Salvar</button>
+<div class="overlay">
+    <div
+        class="form-container flex flex-column gap-1"
+        @keydown.escape.window="openModal = ''"
+        x-cloak
+    >
+        <div>
+            <h2 class="text-center">Adicionar Gasto</h2>
         </div>
-
-        <div x-show="openModal === 'other'">
-            <h2>Adicionar Outro Valor</h2>
-            <input type="text" placeholder="Descrição" x-model="newOtherDesc" />
-            <input type="number" placeholder="Valor" x-model="newOtherValue" />
-            <button @click="addOther">Salvar</button>
+        <form class="flex flex-column gap-2">
+            <div>
+                <label for="debt-name">Nome</label>
+                <input class="input-form" type="text" />
+            </div>
+            <div>
+                <label for="debt-value">Valor</label>
+                <input class="input-form" type="" />
+            </div>
+            <div>
+                <label for="debt-category">Categoria</label>
+                {%include
+                "partials/home/add-debt-modal/components/dropdown.html" %}
+            </div>
+            <div>
+                <label for="debt-start-date">Início</label>
+                <input class="input-form" type="date" />
+            </div>
+            <div>
+                <label for="debt-installments">Parcelas</label>
+                <input class="input-form" type="number" />
+            </div>
+        </form>
+        <div class="padding-1 text-center">
+            <p class="text-muted">Todos os campos são obrigatórios.</p>
         </div>
-
-        <div x-show="openModal === 'card'">
-            <h2>Novo Cartão de Crédito</h2>
-            <input
-                type="text"
-                placeholder="Nome do Cartão"
-                x-model="newCard.name"
-            />
-            <input type="number" placeholder="Limite" x-model="newCard.limit" />
-            <input type="number" placeholder="Usado" x-model="newCard.used" />
-            <button @click="addCard">Salvar</button>
+        <div class="flex justify-between">
+            <button type="submit" class="button">Adicionar</button>
+            <button
+                type="button"
+                class="cancel-button"
+                @click="openModal = false"
+            >
+                Cancelar
+            </button>
         </div>
     </div>
 </div>
+

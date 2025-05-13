@@ -7,6 +7,8 @@
 @use "../../utils/components/typography.scss";
 @use "../../utils/components/class.scss";
 @use "../../utils/components/dropdown.scss";
+@use "../../utils/components/colors.scss";
+
 
 @use "../../partials/login-form/login-form.scss";
 @use "../../partials/home/wallet/wallet.scss";
@@ -15,11 +17,11 @@
 @use "../../partials/home/menu/menu-desktop/sidebar.scss";
 @use "../../partials/home/add-debt-modal/add-debt-modal.scss";
 @use "../../partials/home/profile-user/profile-user.scss";
-@use "../../partials/home/dashboard/components/chart/chart.scss";
 @use "../../partials/home/transactions/transactions.scss";
 @use "../../partials/home/ajusts/ajusts.scss";
 @use "../../partials/home/menu/navbar/components/notifications/notification.scss";
 @use "../../partials/home/bubble/bubble.scss";
+@use "../../partials/home/dashboard/components/expenses-list.html/expenses-list.scss";
 
 
 

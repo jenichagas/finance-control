@@ -12,7 +12,7 @@
         flex-wrap: wrap;
 
         .card {
-            background: white;
+            background: var(--light-color);
             padding: 1.5rem;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -23,7 +23,7 @@
 
             &.card-blue {
                 background: var(--gradient);
-                color: #ffffff;
+                color: var(--light-color);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -35,6 +35,8 @@
 
                 h2 {
                     font-size: 2rem;
+                    font-weight: 100;
+
                 }
 
                 .icon-container {
@@ -51,14 +53,14 @@
             &.wallet-balance {
                 h2 {
                     font-size: 2rem;
-                    margin-bottom: 0.5rem;
+                    font-weight: 100;
                 }
                 .income {
-                    color: green;
+                    color: var(--green-color-font);
                     margin-right: 1rem;
                 }
                 .expenses {
-                    color: red;
+                    color: var(--orange-color);
                 }
             }
 
@@ -72,7 +74,7 @@
                         display: block;
                         height: 100%;
                         border-radius: 10px;
-                        background: var(--primary-color);
+                        background: var(--gradient);
                     }
                 }
             }
@@ -102,7 +104,7 @@
                 width: 120px;
                 height: 120px;
                 border-radius: 50%;
-                border: 8px solid #00a8cc;
+                border: 8px solid var(--primary-color);
                 display: flex;
                 align-items: center;
                 justify-content: center;

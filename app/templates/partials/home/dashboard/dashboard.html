@@ -26,7 +26,7 @@
         <section class="dashboard-grid">
             <div class="card card-blue">
                 <div class="icon-container">
-                    <h3>Salário</h3>
+                    <h3>Receita</h3>
                     <div
                         @click="showSalary = !showSalary"
                         class="cursor-pointer"
@@ -46,25 +46,25 @@
                         </template>
                     </div>
                 </div>
-                <h2 x-text="showSalary ? 'R$ 5.678,00' : '••••••'"></h2>
+                <h2 x-text="showSalary ? 'R$5.678,00' : '••••••'"></h2>
             </div>
 
             <div class="card wallet-balance">
                 <h3>Gasto Total</h3>
 
-                <h2>R$4,523.98</h2>
+                <h2 class="green-color-font">R$4.523,98</h2>
                 <p>
-                    <span class="income">R$3,030.98</span>
+                    <span class="income">R$3.030,98</span>
                     <span class="expenses">R$223.98</span>
                 </p>
             </div>
 
             <div class="card payable-accounts">
                 <h3>Meta de gasto</h3>
-                <p>30%</p>
+                <p>80%</p>
                 <div class="progress"><span style="width: 87.5%"></span></div>
                 <p></p>
-                <p><strong>18 DE OUT 2025</strong></p>
+                <p class="orange-color">18 DE OUT 2025</p>
             </div>
 
             <!-- <div class="card chart">
