@@ -3,6 +3,8 @@
     flex-direction: column;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.075);
+    
 
     .expense-header {
         display: grid;
