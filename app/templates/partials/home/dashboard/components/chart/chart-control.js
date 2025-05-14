@@ -6,60 +6,62 @@ const chartControl = () => ({
 
     init() {
         const options = {
-            series: [44, 55, 41, 17, 15],
             chart: {
-                width: 380,
-                type: "donut",
+                type: "bar",
+                height: 300,
             },
             plotOptions: {
-                pie: {
-                    startAngle: -90,
-                    endAngle: 270,
+                bar: {
+                    horizontal: true,
+                    barHeight: "50%",
+                    distributed: true,
                 },
             },
             dataLabels: {
-                enabled: false,
-            },
-            fill: {
-                type: "donut",
-            },
-            legend: {
-                formatter: function (val, opts) {
-                    return (
-                        val + " - " + opts.w.globals.series[opts.seriesIndex]
-                    );
+                enabled: true,
+                style: {
+                    fontSize: "12px",
                 },
+                formatter: (val) => `R$ ${val.toFixed(2)}`,
             },
-            title: {
-                text: "",
-            },
-            responsive: [
+            series: [
                 {
-                    breakpoint: 480,
-                    options: {
-                        chart: {
-                            width: 200,
-                        },
-                        legend: {
-                            position: "bottom",
-                        },
-                    },
+                    data: [1350, 900, 700, 400,400, 300,300, 200],
                 },
             ],
+            xaxis: {
+                categories: [
+                    "Alimentação",
+                    "Transporte",
+                    "Lazer",
+                    "Educação",
+                    "Alimentação",
+                    "Transporte",
+                    "Lazer", 
+                ],
+
+                labels: {
+                    style: {
+                        fontSize: "14px",
+                    },
+                },
+
+                title: {
+                    text: "Valor gasto (R$)",
+                },
+            },
+            colors: ["#00a8cc", "#2ed8b6", "#f06543", "#db5e5e"],
+            legend: {
+                show: false,
+            },
         };
 
         this.chart = new ApexCharts(
             document.getElementById("column-chart"),
             options
-        );                                                                                  
+        );
         this.chart.render();
     },
-
-    destroy() {
-        if (this.chart) {
-          this.chart.destroy();
-        }
-      },
 });
 
 Alpine.data("chartControl", chartControl);
