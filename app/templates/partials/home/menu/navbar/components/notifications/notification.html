@@ -16,12 +16,25 @@
         class="notification-dropdown"
         x-transition
     >
-        <h4>Notificações</h4>
+        <div class="flex align-center justify-between p-t-2 p-b-2">
+            <h4>Notificações</h4>
+            <a
+                class="text-muted cursor-pointer flex align-center"
+                style="font-size: 0.7rem"
+                >{%include "partials/components/icons/check-icon.svg"%}Marcar
+                como lida</a
+            >
+        </div>
         <ul>
             <template x-for="(notif, index) in notifications" :key="index">
-                <li x-text="notif.message">
-
-                </li>
+                <div class="flex align-center gap-1">
+                    <div>
+                        {%include "partials/components/icons/alert-icon.svg"%}
+                    </div>
+                    <div>
+                        <li x-text="notif.message"></li>
+                    </div>
+                </div>
             </template>
         </ul>
         <div x-show="notifications.length === 0" class="no-notifications">

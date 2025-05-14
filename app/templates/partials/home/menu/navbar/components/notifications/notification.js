@@ -8,7 +8,7 @@ const notificationControl = () => ({
         { message: "Nova meta cadastrada" },
         {
             message:
-                "Organize-se! Adicione novo gasto para melhor controle financeiro.",
+                "Organize-se! Adicione novo gasto.",
         },
     ],
 
