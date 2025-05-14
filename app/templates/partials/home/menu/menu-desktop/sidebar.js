@@ -10,7 +10,6 @@ const sidebarControl = () => ({
     },
 
     toggleSidebar() {
-      console.log("ai")
         this.isOpen = !this.isOpen;
         localStorage.setItem("sidebarOpen", JSON.stringify(this.isOpen));
     },
