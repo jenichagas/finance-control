@@ -1,19 +1,20 @@
 <div class="wallet-actions">
-    <button @click="openModal = true" class="btn">
-        {% include "partials/components/icons/plus-rounded-icon.svg" %}
-        Adicionar receita
+    <button
+        @click="openModal = true"
+        class="btn w-full flex justify-center align-center"
+    >
+        <div class="flex gap-1">
+            {% include "partials/components/icons/plus-rounded-icon.svg" %}
+            Adicionar receita
+        </div>
     </button>
 </div>
-
-<div
-    class="overlay"
-    x-show="openModal"
-    x-transition
->
-    <div class="form-container flex flex-column gap-1" x-cloak 
-    @keydown.escape.window="openModal = false"
-    @click.away="openModal = false"
-    
+<div class="overlay" x-show="openModal" x-transition>
+    <div
+        class="form-container flex flex-column gap-1"
+        x-cloak
+        @keydown.escape.window="openModal = false"
+        @click.away="openModal = false"
     >
         <div>
             <h2 class="text-center">Adicionar Renda</h2>

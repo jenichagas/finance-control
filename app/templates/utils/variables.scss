@@ -1,44 +1,72 @@
 $theme: (
-  default: ( 
-    primary-color: #00a8cc,
-    secondary-color: #0088a9,
-    secondary-btn: #0c95b795,
-    orange-color: #db5e5e,
-    orange-hover-color: #f08469,                           
-    background-input: #00a7cc11,
-    dark-color: #000000,
-    light-color: #ffffff,
-    sidebar-background-color: #edf2f7,
-    box-shadow-color: rgba(0, 0, 0, 0.833),
-    text-muted: #718096,
-    text-muted-hover: #323841,
-    gradient: linear-gradient(135deg, #00a8cc, #6ad9f1),
-    transition-standard: all 0.3s ease,
-    border-color: #71809619,
-    green-color: linear-gradient(135deg, #a3eabd, #c2f1d3,#c3ead1),
-    green-color-font: #3d8257,
-    red-color: #c70303,
-    yellow-color:#e5c536,
-  ),
+    default: (
+        primary-color: #00a8cc,
+        secondary-color: #0088a9,
+        secondary-btn: #0c95b795,
+        orange-color: #db5e5e,
+        orange-hover-color: #f08469,
+        background-input: #00a7cc11,
+        dark-color: #000000,
+        light-color: #ffffff,
+        sidebar-background-color: #edf2f7,
+        box-shadow-color: rgba(0, 0, 0, 0.833),
+        text-muted: #718096,
+        text-muted-hover: #323841,
+        gradient: linear-gradient(135deg, #00a8cc, #6ad9f1),
+        transition-standard: all 0.3s ease,
+        border-color: #71809619,
+        green-color: linear-gradient(135deg, #a3eabd, #c2f1d3, #c3ead1),
+        green-color-font: #3d8257,
+        red-color: #c70303,
+        yellow-color: #e5c536,
+        gradient-secondary:
+            linear-gradient(
+                135deg,
+                #0088a9,
+                #3db1cb,
+                #00a8cc,
+                #12aacc,
+                #04add3,
+                #5ad5f1,
+                #00a7cc,
+                #6ad9f1
+            ),
+        green-gradient-color:
+            linear-gradient(
+                135deg,
+                #72cea3 0%,
+                #6dd5a5 20%,
+                #57da8f 50%,
+                #36ea8a 75%,
+                #6de0a6 100%
+            ),
+        white-gradient:
+            linear-gradient(
+                135deg,
+                #fafafa 70%,
+                #ffffff 60%,
+                #ffffff 100%
+            )
+            
+    ),
 
-  dark: ( 
-    primary-color: #00a8cc,                          
-    secondary-color: #007786,                        
-    accent-color: #7fffd4,                           
-    orange-color: #f06543,                           
-    green-color: #2ed8b6,                            
-    background-color: #121212,                       
-    card-color: #1e1e1e,                             
-    sidebar-background-color: #1a1a1a,               
-    border-color: rgba(255, 255, 255, 0.1),          
-    box-shadow-color: rgba(0, 0, 0, 0.6),            
-    text-muted: #a0aec0,                             
-    text-muted-hover: #cbd5e0,                       
-    light-color: #e7e5e5,                            
-    dark-color: #000000,                             
-    background-input: #2a2a2a,                       
-    gradient: linear-gradient(135deg, #00c2cb, #0093b4),
-    transition-standard: all 0.3s ease
-  )
+    dark: (
+        primary-color: #00a8cc,
+        secondary-color: #007786,
+        accent-color: #7fffd4,
+        orange-color: #f06543,
+        green-color: #2ed8b6,
+        background-color: #121212,
+        card-color: #1e1e1e,
+        sidebar-background-color: #1a1a1a,
+        border-color: rgba(255, 255, 255, 0.1),
+        box-shadow-color: rgba(0, 0, 0, 0.6),
+        text-muted: #a0aec0,
+        text-muted-hover: #cbd5e0,
+        light-color: #e7e5e5,
+        dark-color: #000000,
+        background-input: #2a2a2a,
+        gradient: linear-gradient(135deg, #00c2cb, #0093b4),
+        transition-standard: all 0.3s ease,
+    ),
 );
-

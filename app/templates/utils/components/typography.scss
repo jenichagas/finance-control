@@ -1,30 +1,45 @@
 h1 {
     font-size: 2rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+}
+h2 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+}
+h3 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+    font-size: 1.1rem;
+
 }
 p {
     font-size: 0.875rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
 }
 a {
     text-decoration: none;
     color: var(--text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
 
     &:hover {
         color: var(--accent-color);
     }
 }
-
 label {
     font-size: 0.9rem;
     font-weight: 600;
     display: block;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
 }
-
+small {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+}
 li {
     list-style-type: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
 }
 
 button {
     border: none;
     background: transparent;
     outline: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
 }

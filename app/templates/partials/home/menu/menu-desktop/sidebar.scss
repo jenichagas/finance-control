@@ -72,10 +72,10 @@
                 &.active,
                 &:hover {
                     background: var(--primary-color);
-                    color: white;
+                    color: var(--light-color);
 
                     i svg {
-                        fill: white !important;
+                        fill: var(--light-color)!important;
                     }
                 }
             }
