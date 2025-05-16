@@ -1,5 +1,5 @@
 <section x-data="walletControl()" class="wallet-page">
-    <h1 class="p-1">Carteira Financeira</h1>
+    <h1 class="p-1 primary-color">Carteira Financeira</h1>
     <div class="wallet-section">
         <div class="flex gap-2">
             <div class="wallet-card w-33 relative justify-between">
@@ -94,10 +94,10 @@
             </h2>
             <ul class="wallet-card">
                 <li>
-                    Comprometido:<span x-text="format(committedAmount)"></span>
+                    Comprometido: <span class="orange-color">R$</span><span class="orange-color" x-text="format(committedAmount)"></span>
                 </li>
                 <li>
-                    Sobra do mês:<span x-text="format(monthBalance)"></span>
+                    Sobra do mês: <span class="green-color-font">R$</span><span class="green-color-font" x-text="format(monthBalance)"></span>
                 </li>
                 <li x-show="monthBalance < 0" class="negative">
                     Atenção! Mês negativo

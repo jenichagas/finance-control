@@ -23,6 +23,7 @@
             border-radius: 0.75rem;
             padding: 1.25rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.203);
+            transition: all 0.3s ease;
 
             p {
                 font-size: 1rem;
@@ -35,6 +36,12 @@
                     width: 18px;
                     height: 18px;
                 }
+            }
+
+            &:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                // background: linear-gradient(135deg, rgba(255,255,255,0.03), transparent);
             }
         }
 
