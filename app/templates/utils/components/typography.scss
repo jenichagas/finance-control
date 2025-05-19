@@ -1,23 +1,23 @@
 h1 {
     font-size: 2rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+    text-shadow: 0 1px 2px #0000000d;
 }
 h2 {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+    text-shadow: 0 1px 2px #0000000d;
 }
 h3 {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+    text-shadow: 0 1px 2px #0000000d;
     font-size: 1.1rem;
 
 }
 p {
     font-size: 0.875rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+    text-shadow: 0 1px 2px #0000000d;
 }
 a {
     text-decoration: none;
     color: var(--text-muted);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.111);
+    text-shadow: 0 1px 2px #0000000d;
 
     &:hover {
         color: var(--accent-color);

@@ -27,17 +27,27 @@ const walletControl = () => ({
     addSalary() {
         this.salary = Number(this.newSalary);
         this.totalIncome = this.salary + this.extraIncome;
+        Alpine.store("walletStore").totalIncome = this.totalIncome;
+        Alpine.store("walletStore").monthBalance = this.monthBalance;
+        Alpine.store("walletStore").committedAmount = this.committedAmount;
         this.openModal = "";
     },
 
     addExtra() {
-        this.extraIncome = Number(this.newExtra);
+        this.salary = Number(this.extraIncome);
         this.totalIncome = this.salary + this.extraIncome;
+        Alpine.store("walletStore").totalIncome = this.totalIncome;
+        Alpine.store("walletStore").monthBalance = this.monthBalance;
+        Alpine.store("walletStore").committedAmount = this.committedAmount;
         this.openModal = "";
     },
 
     addOther() {
-        this.totalIncome += Number(this.newOtherValue);
+        this.salary = Number(this.newOtherValue);
+        this.totalIncome = this.salary + this.extraIncome;
+        Alpine.store("walletStore").totalIncome = this.totalIncome;
+        Alpine.store("walletStore").monthBalance = this.monthBalance;
+        Alpine.store("walletStore").committedAmount = this.committedAmount;
         this.openModal = "";
     },
 
@@ -50,6 +60,12 @@ const walletControl = () => ({
         this.newCard = { name: "", limit: "", used: "" };
         this.openModal = "";
     },
+});
+
+Alpine.store("walletStore", {
+    committedAmount: 4200,
+    monthBalance: 2000,
+    totalIncome: 6200,
 });
 
 Alpine.data("walletControl", walletControl);

@@ -41,13 +41,21 @@ $theme: (
                 #6de0a6 100%
             ),
         white-gradient:
+            linear-gradient(135deg, #fafafa 70%, #ffffff 60%, #ffffff 100%),
+        orange-gradient:
             linear-gradient(
                 135deg,
-                #fafafa 70%,
-                #ffffff 60%,
-                #ffffff 100%
-            )
-            
+                #f9bc9f,
+                #f08469,
+                #f08469,
+                #f08469,
+                #f5ad8c,
+                #f08469,
+                #f08469,
+                #f08469,
+                #f9bc9f,
+                #fff7f2
+            ),
     ),
 
     dark: (

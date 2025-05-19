@@ -2,14 +2,17 @@
     <h1 class="p-1 primary-color">Carteira Financeira</h1>
     <div class="wallet-section">
         <div class="flex gap-2">
-            <div class="wallet-card w-33 relative justify-between">
+            <div class="wallet-card salary w-33 relative justify-between">
                 <div class="flex flex-column gap-4">
-                    <h3 style="font-size: 2rem">{%include
-                        "partials/components/icons/coin-icon.svg"%}Salário</h3>
-                    <p class="green-color-font" style="font-size: 2rem">
+                    <h3 class="white-text-color " style="font-size: 2rem">
+                        {%include
+                        "partials/components/icons/coin-icon.svg"%}Salário
+                    </h3>
+                    <p class="white-text-color " style="font-size: 2rem">
                         R$<span x-text="format(salary)"></span>
                     </p>
                 </div>
+
                 <div>
                     {%include
                     "partials/home/wallet/components/modal/modal.html"%}
@@ -18,12 +21,18 @@
             <div class="flex flex-column gap-2 w-33">
                 <div class="wallet-card">
                     <h3 class="flex align-center gap-1">
-                        {%include "partials/components/icons/money-enter-icon.svg"%}Renda Extra
+                        {%include
+                        "partials/components/icons/money-enter-icon.svg"%}Renda
+                        Extra
                     </h3>
                     <p>R$<span x-text="format(extraIncome)"></span></p>
                 </div>
                 <div class="wallet-card total white-text-color">
-                    <h3 class="flex align-center"> {%include "partials/components/icons/wallet-icon.svg"%}Total Disponível</h3>
+                    <h3 class="flex align-center">
+                        {%include
+                        "partials/components/icons/wallet-icon.svg"%}Total
+                        Disponível
+                    </h3>
                     <p>R$<span x-text="format(totalIncome)"></span></p>
                 </div>
             </div>
@@ -69,10 +78,11 @@
             <div class="flex flex-column gap-2">
                 <div class="wallet-card">
                     <div class="flex align-center gap-1">
-                        {%include "partials/components/icons/plus-icon.svg"%}
+                        {%include
+                        "partials/components/icons/emergency-icon.svg"%}
                         <h3>Emergência</h3>
                     </div>
-                    <p style="padding-left: 0.5em">
+                    <p class="green-color-font" style="padding-left: 0.5em">
                         R$<span x-text="format(reserveEmergency)"></span>
                     </p>
                 </div>
@@ -82,10 +92,11 @@
                         "partials/components/icons/chart-investment-icon.svg"%}
                         <h3>Investimentos</h3>
                     </div>
-                    <p style="padding-left: 0.5em">
+                    <p class="green-color-font" style="padding-left: 0.5em">
                         R$<span x-text="format(reserveInvestments)"></span>
                     </p>
                 </div>
+                
             </div>
         </div>
         <div class="wallet-section w-50">
@@ -93,16 +104,35 @@
                 {%include "partials/components/icons/list-icon.svg"%} Resumo
             </h2>
             <ul class="wallet-card">
-                <li>
-                    Comprometido: <span class="orange-color">R$</span><span class="orange-color" x-text="format(committedAmount)"></span>
-                </li>
-                <li>
-                    Sobra do mês: <span class="green-color-font">R$</span><span class="green-color-font" x-text="format(monthBalance)"></span>
-                </li>
+                <div class="flex align-center">
+                    {%include "partials/components/icons/padlock-icon.svg"%}
+
+                    <li class="flex align-center">
+                        <h3>Comprometido:</h3>
+                        <span class="orange-color"> &nbsp;R$</span
+                        ><span
+                            class="orange-color"
+                            x-text="format(committedAmount)"
+                        ></span>
+                    </li>
+                </div>
+                <div class="flex align-center">
+                    {%include "partials/components/icons/money-check-icon.svg"%}
+                    <li class="flex align-center">
+                        <h3>Sobra do mês:</h3>
+
+                        <span class="green-color-font"> &nbsp;R$</span
+                        ><span
+                            class="green-color-font"
+                            x-text="format(monthBalance)"
+                        ></span>
+                    </li>
+                </div>
                 <li x-show="monthBalance < 0" class="negative">
                     Atenção! Mês negativo
                 </li>
             </ul>
         </div>
+        
     </div>
 </section>

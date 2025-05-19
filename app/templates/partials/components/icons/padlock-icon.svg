@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Money note -->
+  <rect x="2" y="6" width="20" height="12" rx="2" ry="2" stroke="#db5e5e" stroke-width="2" fill="none"/>
+
+  <!-- Dollar sign -->
+  <text x="6.5" y="16" font-size="10" fill="#db5e5e" font-family="Arial" font-weight="bold">$</text>
+
+  <!-- Lock base (bottom right of $) -->
+  <rect x="13.5" y="15.5" width="6" height="5" rx="1" stroke="#db5e5e" stroke-width="2" fill="#db5e5e"/>
+
+  <!-- Lock shackle (now centered over the lock base) -->
+  <path d="M14.5 15.5V14C14.5 12.9 15.4 12 16.5 12C17.6 12 18.5 12.9 18.5 14V15.5" 
+        stroke="#db5e5e" stroke-width="2" fill="none"/>
+
+  <!-- Keyhole -->
+  <circle cx="16.5" cy="18" r="0.6" fill="white" />
+</svg>

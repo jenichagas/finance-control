@@ -14,6 +14,7 @@ import "../../partials/home/ajusts/ajusts.js";
 import "../../partials/home/menu/navbar/components/notifications/notification.js";
 import "../../partials/home/bubble/bubble-control.js";
 import "../../partials/home/dashboard/components/chart-monthly-evolution/chart.js";
+import "../../partials/home/wallet/components/modal/components/chart/chart.js";
 
 window.Alpine = Alpine;
 Alpine.start();
